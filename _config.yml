@@ -2,7 +2,25 @@
 title: Data Science Workshop
 subtitle: Machine Learning, Deep Learning and Big Data
 description: |
-    Data can be a valuable asset, especially when there’s a lot of it. Exploratory data analysis, business intelligence, and machine learning can benefit tremendously if such big data can be wrangled and modelled at scale. Apache Spark is an open-source distributed engine for querying, processing and modeling big data. In this one-day workshop, you will learn how to leverage Spark and R/Python to process and model big data with common machine learning algorithm. By the end of this workshop, you will have a solid understanding of how to process big data using Spark and how to build common machine learning models in the cloud environment. You will also learn the motivation and use cases of deep learning through hands-on exercises. 
+    Data can be a valuable asset, especially when there’s a lot of it. 
+    Exploratory data analysis, business intelligence, 
+    and machine learning can benefit tremendously if such big data 
+    can be wrangled and modelled at scale. 
+    Apache Spark is an open-source distributed engine for 
+    querying, processing and modeling big data. 
+    In this one-day workshop, you will learn how to leverage 
+    Spark and R/Python to process and model big data with 
+    common machine learning algorithm. By the end of this workshop, 
+    you will have a solid understanding of how to process big data using 
+    Spark and how to build common machine learning models in the cloud environment. 
+    You will also learn the motivation and use cases of deep learning through
+    hands-on exercises.  <br/>  
+    </br>
+    This workshop is designed for audience with statistics education background. 
+    This course bridges the gap between traditional statisticians and data scientists. 
+    No software download or installation is needed, everything is done through 
+    laptop’s internet browser (Chrome or Firefox) with Databricks free cloud environment.
+    
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://course-website.svmiller.com" # the base hostname & protocol for your site
 syllabus: "https://github.com/happyrabbit/course2020/blob/master/README.md"
