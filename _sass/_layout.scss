@@ -1,4 +1,39 @@
 
+@font-face {
+  font-family: 'Essays 1743';
+  src: url('/f/essays1743-webfont.eot');
+  src: local('Essays 1743'), url('/f/essays1743-webfont.woff') format('woff'), url('/f/essays1743-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Essays 1743';
+  src: url('/f/essays1743-italic-webfont.eot');
+  src: local('Essays 1743'), url('/f/essays1743-italic-webfont.woff') format('woff'), url('/f/essays1743-italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/f/linlibertine_re-4.7.5-webfont.eot');
+  src: local('Linux Libertine'), url('/f/linlibertine_re-4.7.5-webfont.woff') format('woff'), url('/f/linlibertine_re-4.7.5-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/f/linlibertine_bd-4.1.5-webfont.eot');
+  src: local('Linux Libertine'), url('/f/linlibertine_bd-4.1.5-webfont.woff') format('woff'), url('/f/linlibertine_bd-4.1.5-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Linux Libertine';
+  src: url('/f/linlibertine_it-4.2.6-webfont.eot');
+  src: local('Linux Libertine'), url('/f/linlibertine_it-4.2.6-webfont.woff') format('woff'), url('/f/linlibertine_it-4.2.6-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
 
 /* .site-nav {
     float: right;
@@ -183,8 +218,8 @@ h1 /* .post-title */ {
 /*    font-size: 42px; */
     letter-spacing: -1px;
     line-height: 1;
-		font-family: 'Titillium Web', sans-serif;
-		color: #522d80;
+		font-family: "Roboto", Arial, sans-serif;
+		color: #0e1e25;
 
     @include media-query($on-laptop) {
 /*        font-size: 36px; */
@@ -195,7 +230,7 @@ h1 /* .post-title */ {
     margin-bottom: $spacing-unit;
 
     h2 {
-		font-family: 'Titillium Web', sans-serif;
+		font-family: "Roboto", Arial, sans-serif;
 	font-weight: 500;
 /*        font-size: 32px; */
 
@@ -237,7 +272,7 @@ ul.listing {
 ul.listing li.listing-seperator {
 	padding-top: 15px;
 	font-weight: bold;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1.17em;
 }
 
@@ -250,9 +285,9 @@ ul.listing li.listing-item time {
 }
 
 ul.listing li.listing-item a {
-	color: $clemson-purple;
+	color: $header-darkgray;
 	font-weight: 400;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 }
 
 
@@ -292,9 +327,9 @@ ul#archive li.alt {
 }
 
 ul#archive li span a {
-       color: $clemson-purple;
+       color: $header-darkgray;
 	font-weight: bold;
-font-family: 'Titillium Web', sans-serif;
+font-family: "Roboto", Arial, sans-serif;
 }
 
 
@@ -306,7 +341,7 @@ ul#archive li span.postlower {
 ul#archive li span.postlower a {
 	color: #07c;
 	font-weight: normal;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 
 }
 

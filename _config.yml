@@ -1,17 +1,8 @@
 # Site settings
-title: Course Website
-subtitle: Title of the Course
+title: Data Science Workshop
+subtitle: Machine Learning, Deep Learning and Big Data
 description: |
-    Add a description of your course. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Etiam fermentum massa id justo varius, vitae blandit nibh aliquet. 
-    Nam consequat accumsan massa id lacinia. Proin ac placerat neque. Vivamus ornare eget tortor ac tincidunt. 
-    Mauris semper viverra dui in molestie. Proin bibendum metus orci, quis sollicitudin ligula pretium non. 
-    Integer nec lacus eget neque laoreet semper. Pellentesque eu dolor rutrum, consectetur enim nec, fermentum odio. 
-    Duis venenatis metus cursus, ultrices nulla in, dapibus urna. Fusce pellentesque eros sed justo viverra ultricies. 
-    Morbi porttitor dui ut erat congue accumsan. Donec eget turpis quam. Nam quis lobortis nisl. 
-    Pellentesque varius tincidunt purus, dictum sodales leo suscipit quis. 
-    Proin ullamcorper tristique nisi, quis hendrerit turpis. Donec non congue velit. 
-    Praesent accumsan odio egestas, mollis lorem eget, euismod arcu. 
+    Data can be a valuable asset, especially when there’s a lot of it. Exploratory data analysis, business intelligence, and machine learning can benefit tremendously if such big data can be wrangled and modelled at scale. Apache Spark is an open-source distributed engine for querying, processing and modeling big data. In this one-day workshop, you will learn how to leverage Spark and R/Python to process and model big data with common machine learning algorithm. By the end of this workshop, you will have a solid understanding of how to process big data using Spark and how to build common machine learning models in the cloud environment. You will also learn the motivation and use cases of deep learning through hands-on exercises. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://course-website.svmiller.com" # the base hostname & protocol for your site
 syllabus: "https://github.com/svmiller/svm-r-markdown-templates/blob/master/syllabus-example/svm-rmarkdown-syllabus-example.pdf"
