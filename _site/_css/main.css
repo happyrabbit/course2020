@@ -260,6 +260,11 @@ p, blockquote, pre,
 ul, ol, dl, figure {
   margin-bottom: 15px; }
 
+p {
+  margin: 25px 0;
+  color: #333333;
+  font-family: "Roboto", Arial, sans-serif; }
+
 /**
  * Images
  */

@@ -36,7 +36,11 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
+p {
+    margin: 25px 0;
+    color: #333333;
+    font-family: "Roboto", Arial, sans-serif;
+}
 
 /**
  * Images
