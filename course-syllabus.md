@@ -8,16 +8,23 @@ permalink: /course-syllabus/
 {% include image.html url="/_images/fabulous-sylvester.jpg" caption="The Textbook for the Semester" width=300 align="right" %}
 -->
 
-# Schedule
 
-
-| Topic | Time |
+| Part One |  |
 | :---: | :---: |
-| Introduction to Data Science | 10:00 - 11:00 | 
-| FFNN + FFNN hands on| 11:00- 12:00 |
-| Lunch | 12:00 - 13:00 |
-| CNN + RNN + hands on | 13:00 - 15:00 |
-| Break | 15:00 - 15:15 |
-| Big Data Pipeline | 15:15 - 16:00 |
-| Cloud Platform and Hands-on | 16:00 - 17:00 |
-| Soft Skill and Project Cycle | 17:00 - 17:30 |
+| Introduction to Data Science | 50 mins | 
+| FFNN + FFNN hands on| 60 mins |
+| Break | 10 mins |
+| CNN + hands on | 60 mins |
+| Break | 15 mins |
+| RNN + hands on | 45 mins |
+
+===========================================
+
+| Part Two |  |
+| :---: | :---: |
+| Decision Tree | 60 mins |
+| Decision Tree hands on | 50 mins |
+| Break | 10 mins |
+| Big Data | 60 mins |
+| Break | 15 mins |
+| Cloud Platform and Hands-on | 45 mins |
