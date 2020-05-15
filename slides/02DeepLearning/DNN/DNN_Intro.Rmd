@@ -1,0 +1,329 @@
+---
+title: "Neural Networks and Deep Learning"
+author: '[Hui Lin](https://scientistcafe.com) @Netlify</br> </br> Ming Li @Amazon'
+date: "`r Sys.Date()`"
+output: 
+  slidy_presentation: 
+    footer: "https://course2019.scientistcafe.com/"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Types of Neural Network 
+
+<center>
+![](../CNN/images/NN_EXP.png){width=80%}
+</center>
+
+# Logistic Regression as A Neural Network
+
+- m training samples: $\{(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),...,(x^{(m)}, y^{(m)})\}$
+
+$$X=\left[\begin{array}{cccc}
+x_{1}^{(1)} & x_{1}^{(2)} & \dotsb & x_{1}^{(m)}\\
+x_{2}^{(1)} & x_{2}^{(2)} & \dotsb & x_{2}^{(m)}\\
+\vdots & \vdots & \vdots & \vdots\\
+x_{n_{x}}^{(1)} & x_{n_{x}}^{(2)} & \dots & x_{n_{x}}^{(m)}
+\end{array}\right]\in\mathbb{R}^{n_{x}\times m}$$
+
+$$y=[y^{(1)},y^{(2)},\dots,y^{(m)}] \in \mathbb{R}^{1 \times m}$$
+
+$\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
+
+
+# Logistic Regression as A Neural Network
+
+- m training samples: $\{(x^{(1)}, y^{(1)}),(x^{(2)}, y^{(2)}),...,(x^{(m)}, y^{(m)})\}$
+
+$$X=\left[\begin{array}{cccc}
+x_{1}^{(1)} & x_{1}^{(2)} & \dotsb & x_{1}^{(m)}\\
+x_{2}^{(1)} & x_{2}^{(2)} & \dotsb & x_{2}^{(m)}\\
+\vdots & \vdots & \vdots & \vdots\\
+x_{n_{x}}^{(1)} & x_{n_{x}}^{(2)} & \dots & x_{n_{x}}^{(m)}
+\end{array}\right]\in\mathbb{R}^{n_{x}\times m}$$
+
+$$y=[y^{(1)},y^{(2)},\dots,y^{(m)}] \in \mathbb{R}^{1 \times m}$$
+
+$\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
+
+- Loss function: $L(\hat{y},y) = -ylog(\hat{y})-(1-y)log(1-\hat{y})$
+- Cost function: $J(w,b)=\frac{1}{m} \Sigma_{i=1}^m L(\hat{y}^{(i)}, y^{(i)}) = \frac{1}{m} \Sigma_{i=1}^{m} \{\ -y^{(i)}log(\hat{y}^{(i)})-(1-y^{(i)})log(1-\hat{y}^{(i)}) \}$
+- Goal: Find $w,b$ that mininizes $J(w,b)$
+    - $w := w - \alpha \frac{\partial J}{\partial w}$
+    - $b := b - \alpha \frac{\partial J}{\partial b}$
+
+# Gradient Descent
+
+![](../../../IntroDataScience/images/GradientDescent.png){width=90%}
+
+# Neural Network:  0 Layer Neural Network
+
+<center>
+![](images/dnn0.png){width=60%}
+</center>
+
+# Neural Network: 1 Layer Neural Network
+
+<center>
+![](images/dnn1.png){width=60%}
+</center>
+
+# Deep Neural Network
+
+<center>
+![](../../../IntroDataScience/images/dnn_str.png){width=80%}
+</center>
+
+# Neural Network: 1 Layer Neural Network
+
+<center>
+![](images/dnn_math1.png){width=80%}
+</center>
+
+# Neural Network: 1 Layer Neural Network
+
+<center>
+![](images/dnn_math2.png){width=80%}
+</center>
+
+# Neural Network: 1 Layer Neural Network
+
+<center>
+![](images/dnn_math3.png){width=80%}
+</center>
+
+# Across m Samples
+
+<center>
+![](images/dnn_math4.png){width=80%}
+</center>
+
+# Across m Samples
+
+<center>
+![](images/dnn_math5.png){width=80%}
+</center>
+
+# Activation Functions
+
+<center>
+![](images/activation.png){width=80%}
+</center>
+
+# Activation Functions
+
+- Intermediate layers
+    - Relu (i.e. rectified linear unit) is usually a good choice which has the following good properties:   
+(1) fast computation;   
+(2) non-linear;  
+(3) reduced likelihood of the gradient to vanish;   
+(4) Unconstrained response
+    - Sigmoid, studied in the past, not as good as Relu in deep learning, due to the gradient vanishing problem when there are many layers
+    - hyperbolic tangent function (tanh)
+
+- Last layer which connects to the output
+    - Binary classification: sigmoid with binary cross entropy as loss function
+    - Multiple class, single-label classification: softmax with categorical cross entropy for loss function
+    - Continuous responses: identity function (i.e. y = x)
+
+# Deal with Overfitting: Regularization
+
+For logistic regression,
+
+$$\underset{w,b}{min}J(w,b)= \frac{1}{m} \Sigma_{i=1}^{m}L(\hat{y}^{(i)}, y^{(i)}) + penalty$$
+
+where 
+
+$$L_2\ penalty=\frac{\lambda}{2m}\parallel w \parallel_2^2 = \frac{\lambda}{2m}\Sigma_{i=1}^{n_x}w_i^2$$
+$$L_1\ penalty = \frac{\lambda}{m}\Sigma_{i=1}^{n_x}|w|$$
+For neural network,
+
+$$J(w^{[1]},b^{[1]},\dots,w^{[L]},b^{[L]})=\frac{1}{m}\Sigma_{i=1}^{m}L(\hat{y}^{(i)},y^{(i)}) + \frac{\lambda}{2m}\Sigma_{l=1}^{L} \parallel w^{[l]} \parallel^2_F$$
+where $\parallel w^{[l]} \parallel^2_F = \Sigma_{i=1}^{l}\Sigma_{j=1}^{l-1} (w^{[l]}_{ij})^2$
+
+# Deal with Overfitting: Dropout
+
+![](../CNN/images/dropout.png){width=90%}
+
+# Deal with Overfitting
+
+- Huge number of parameters, even with large amount of training data, there is a potential of overfitting 
+    - Overfitting due to size of the NN (i.e. total number of parameters)
+    - Overfitting due to using the training data for too many epochs
+
+- Solution for overfitting due to NN size
+    - Dropout: randomly dropout some proportion (such as 0.3 or 0.5) of nodes at each layer, which is similar to random forest concept 
+    - Using L1 or L2 regularization in the activation function at each layer 
+
+- Solution for overfitting due to using too many epochs
+    - Run NN with large number of epochs to reach overfitting region through cross validation from training/validation vs. epoch curve
+    - Choose the model with number of epochs that have the minimum validation accuracy as the final NN model
+    - The optimal number for epoch is determined by when the model is not overfitted (i.e. validation accuracy reaches the best performance)
+
+# Is it overfitting?
+
+![](../CNN/images/overfitting.png){width=70%}
+
+#  Batch, Mini-batch, Stochastic Gradient Descent
+
+- Mini-batch size = m: batch gradient descent, too long per iteration
+- Mini-batch size = 1: stochastic gradient descent, lose speed from vectorization
+- Mini-batch size in between: mini-batch gradient descent, make progress without processing all training set, typical batch sizes are $2^6=64$, $2^7=128$, $2^7=256$, $2^8=512$
+
+
+$$\begin{array}{ccc}
+x= & [\underbrace{x^{(1)},x^{(2)},\cdots,x^{(1000)}}/ & \cdots/\cdots x^{(m)}]\\
+(n_{x},m) & mini-batch\ 1
+\end{array}$$
+
+$$\begin{array}{ccc}
+y= & [\underbrace{y^{(1)},y^{(2)},\cdots,y^{(1000)}}/ & \cdots/\cdots y^{(m)}]\\
+(1,m) & mini-batch\ 1
+\end{array}$$
+
+
+# Exponentially Weighted Averages
+
+Suppose we have the following 100 days' temperature data:
+
+$$ \theta_{1}=49F, \theta_{2}=53F, \dots, \theta_{99}=70F, \theta_{100}=69F$$
+
+The weighted average is defined as:
+
+$$V_t = \beta V_{t-1}+(1-\beta)\theta_t$$
+
+And we have:
+
+$$\begin{array}{c} V_{0}=0\\ V_{1}=\beta V_1 + (1-\beta)\theta_1\\ V_2=\beta V_1 + (1-\beta)\theta_2\\ \vdots \\ V_{100}= \beta V_{99} + (1-\beta)\theta_{100} \end{array}$$
+
+# Corrected Exponentially Weighted Averages
+
+$$V_t^{corrected} = \frac{V_t}{1-\beta^t}$$
+
+For example, 
+
+$$\begin{array}{cc} \beta=0.95\\ V_{0}=0\\ V_{1}=0.05\theta_{1} & V_{1}^{corrected}=\frac{V_{1}}{1-0.95}=\theta_{1}\\ V_{2}=0.95V_{1}+0.05\theta_{1}=0.0475\theta_{1}+0.05\theta_{2} & V_{2}^{corrected}=\frac{V_{2}}{1-0.95^{2}}=0.4872\theta_{1}+0.5128\theta_{2} \end{array}$$
+
+# With v.s. Without Correction
+
+<center>
+![](images/wgt_ave_plot.png){width=80%}
+</center>
+
+# Momentum
+
+On iteration t, compute $dw$, $db$ using samples in one mini-batch and update the parameters as follows:
+
+$$V_{dw} = \beta V_{dw}+(1-\beta)dw$$
+
+$$V_{db} = \beta V_{db}+(1-\beta)db$$
+
+$$w=w-\alpha V_{dw};\ \ b=b-\alpha V_{db}$$
+
+<center>
+![](images/weighted_agv.png){width=40%}
+</center>
+
+
+# RMSprop
+
+On iteration t, compute dw, db using the current mini-batch.
+
+$$S_{dw}=\beta S_{dw} + (1-\beta)dw^2$$
+
+$$S_{db}=\beta S_{db} + (1-\beta)db^2$$
+
+$$w = w - \alpha \frac{dw}{\sqrt{S_{dw}}};\ b=b-\alpha \frac{db}{\sqrt{S_{db}}}$$
+
+# Adaptive Moment Estimation (Adam)
+
+On iteration t, compute $dw$, $db$ using the current mini-batch.
+
+$$\begin{cases} \begin{array}{c} V_{dw}=\beta_{1}V_{dw}+(1-\beta_{1})dw\\ V_{db}=\beta_{1}V_{db}+(1-\beta_{1})db \end{array} & momantum\ update\ \beta_{1}\end{cases}$$
+
+$$\begin{cases} \begin{array}{c} S_{dw}=\beta_{2}S_{dw}+(1-\beta_{2})dw^{2}\\ S_{db}=\beta_{2}S_{db}+(1-\beta_{2})db^{2} \end{array} & RMSprop\ update\ \beta_{2}\end{cases}$$
+
+$$\begin{cases} \begin{array}{c} V_{dw}^{corrected}=\frac{V_{dw}}{1-\beta_{1}^{t}}\\ V_{db}^{corrected}=\frac{V_{db}}{1-\beta_{1}^{t}} \end{array}\end{cases};\ \ \begin{cases} \begin{array}{c} S_{dw}^{corrected}=\frac{S_{dw}}{1-\beta_{2}^{t}}\\ S_{db}^{corrected}=\frac{S_{db}}{1-\beta_{2}^{t}} \end{array}\end{cases}$$
+
+$$w=w-\alpha \frac{V_{dw}^{corrected}}{\sqrt{S_{dw}^{corrected}} +\epsilon};\ b=b-\alpha\frac{V_{db}^{corrected}}{\sqrt{S_{db}^{corrected}}+\epsilon}$$
+
+# Recap of A Few Key Concepts
+
+- **Data**: Require large well-labeled dataset
+- **Computation**: intensive matrix-matrix operation
+- **Structure** of fully connected feedforward NN
+    - Size of the NN: total number of parameters
+    - Depth: total number of layers (this is where deep learning comes from)
+    - Width of a particular layer: number of nodes (i.e. neurons) in that layer
+- **Activation function**
+    - Intermediate layers
+    - Last layer connecting to outputs
+- **Loss function**
+    - Classification (i.e. categorical response)
+    - Regression (i.e. continuous response)
+- **Optimization methods (SGD)**
+    - Batch size
+    - Learning rate 
+    - Epoch
+- **Deal with overfitting**
+    - Dropout 
+    - Regularization (L1 or L2)
+
+# What deep learning can not do? 
+
+"Have you eaten of the tree of which I commanded you not to eat?"  
+"The woman whom you gave to be with me, she gave me fruit of the tree, and I ate."
+  
+    
+    
+"What is this that you have done?"  
+"The serpent deceived me, and I ate."
+
+# What deep learning can not do? 
+
+From [The Book of Why](http://bayes.cs.ucla.edu/WHY/) by Judea Pearl
+
+<center>
+![](images/Pearl2018_The-Book-of-Why_Ladder-of-Causation_680x950.png){width=50%}
+</center>
+
+# MNIST Dataset
+
+- Contains 70000 handwritten labeled digit images with label (60000 training + 10000 testing)
+- Census Bureau employees and American high school students wrote these digits
+- Each image is 28x28 pixel in greyscale
+- Yann LeCun used convolutional network LeNet to achieve < 1% error rate at 1990s
+
+<center>
+![](images/MNIST.png){width=50%}
+</center>
+
+# Use Keras R Package
+
+1. Data preprocessing (from image to list of input features)
+    - One image of 28x28 grey scale value matrix $\rightarrow$ 784 column of features
+    - Scale the value to between 0 and 1, by divide each value by 255
+    - Make response categorical (i.e. 10 columns with the corresponding digit column 1 and rest columns zero.
+    
+2. Load keras package and build a neural network with a few layers
+    - Define a placeholder object for the NN structure
+    - 1st layer using 256 nodes, fully connected, using ‘relu’ activation function and connect from the input 784 features
+    - 2nd layer using 128 nodes, fully connected, using ‘relu’ activation function
+    - 3rd layer using 64 nodes, fully connected, using ‘relu’ activation function
+    - 4th layer using 10 nodes, fully connected, using ‘softmax’ activation function and connect to the output 10 columns
+    - Add drop out to the first three layers to prevent overfitting
+
+3. Compile the NN model, define loss function, optimizer, and metrics to follow
+
+4. Fit the NN model using the training dataset, define epoch, mini batch size, and validation size used in the training where the metrics will be checked
+
+5. Predict using the fitted NN model using the testing dataset
+
+# R Scripts
+
+<center>
+![](images/rscript.png){width=80%}
+</center>
+

@@ -4,27 +4,27 @@ title: Course Syllabus
 permalink: /course-syllabus/
 ---
 
-<!--
-{% include image.html url="/_images/fabulous-sylvester.jpg" caption="The Textbook for the Semester" width=300 align="right" %}
--->
-
 
 | Part One |  |
 | :---: | :---: |
-| Introduction to Data Science | 50 mins | 
-| FFNN + FFNN hands on| 60 mins |
+| Cloud Platform and Big Data | 45 mins |
+| Hands-on | 30 mins |
+| FFNN  | 45 mins |
 | Break | 10 mins |
-| CNN + hands on | 60 mins |
-| Break | 15 mins |
-| RNN + hands on | 45 mins |
+| FFNN hands on | 30 mins |
+| Break | 10 mins |
+| CNN  | 30 mins |
+| CNN hands on | 30 mins |
+| Q&A | 10 mins |
 
 ===========================================
 
 | Part Two |  |
 | :---: | :---: |
-| Decision Tree | 60 mins |
-| Decision Tree hands on | 50 mins |
+| Introduction to Data Science | 50 mins |
+| Data science project cycle and common pitfall | 50 mins |
 | Break | 10 mins |
-| Big Data | 60 mins |
+| Decision Tree + hands on| 60 mins |
 | Break | 15 mins |
-| Cloud Platform and Hands-on | 45 mins |
+| RNN + hands on | 45 mins |
+| Q&A | 10 mins |

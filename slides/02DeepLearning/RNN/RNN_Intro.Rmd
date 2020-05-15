@@ -1,0 +1,562 @@
+---
+title: "Recurrent Neural Networks"
+author: '[Hui Lin](https://scientistcafe.com) @Netlify</br> </br> Ming Li @Amazon'
+date: "`r Sys.Date()`"
+output: 
+  slidy_presentation: 
+    footer: "https://course2019.scientistcafe.com/"
+    duration: 60
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Types of Neural Network 
+
+<center>
+![](../CNN/images/NN_EXP.png){width=80%}
+</center>
+
+# Why sequency?
+
+ |  |  |  |  |
+|:----------------:|:----------------------------:|:-------------------:|:---------------------:|
+| Speech Recognition | ![](images/sr.PNG){width=60%}| $\longrightarrow$ | Get your facts first, then you can distort them as you please. |
+| Music generation | $\emptyset$ | $\longrightarrow$ |  ![](images/music.PNG){width=60%} |
+| Sentiment classification | Great movie ? Are you kidding  me ! Not worth the money. | $\longrightarrow$ |  ![](images/rate.PNG){width=60%} |
+| DNA sequence analysis | ACGGGGCCTACTGTCAACTG | $\longrightarrow$  | AC _**GGGGCCTACTG**_ TCAACTG |
+| Machine translation | 网红脸 | $\longrightarrow$ | Internet celebrity face |
+| Video activity recognition | ![](images/video.PNG){width=60%} | $\longrightarrow$ | Running |
+| Name entity recognition | Use Netlify and Hugo. | $\longrightarrow$ | Use [Netlify](https://www.netlify.com) and [Hugo](https://gohugo.io). |
+
+
+# RNN types
+
+![](images/rnn_types.PNG){width=90%}
+
+
+# Notation
+
+- x: Use($x^{<1>}$)  Netlify($x^{<2>}$) and($x^{<3>}$) Hugo($x^{<4>}$) .($x^{<5>}$) 
+
+- y: 0 ($y^{<1>}$)  1($y^{<2>}$) 0($y^{<3>}$) 1($y^{<4>}$) 0($y^{<5>}$)
+
+- $x^{(i)<t>}$, $T_x^{(i)}$ ($i^{th}$ sample)
+
+- $y^{(i)<t>}$, $T_y^{(i)}$ ($i^{th}$ sample)
+
+
+# Representing words
+
+- One Hot Encoding (OHE)
+
+$\left[\begin{array}{c}
+a[1]\\
+aaron[2]\\
+\vdots\\
+and[360]\\
+\vdots\\
+Hugo[4075]\\
+\vdots\\
+Netlify[5210]\\
+\vdots\\
+use[8320]\\
+\vdots\\
+Zulu[10000]
+\end{array}\right]\Longrightarrow use=\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right], Netlify=\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+\vdots\\
+0
+\end{array}\right], and=\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+0
+\end{array}\right], Hugo=\left[\begin{array}{c}
+0\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+\vdots\\
+0\\
+\vdots\\
+0
+\end{array}\right]$
+
+
+# What is RNN?
+
+![](images/rnn1.PNG){width=60%}
+
+- x: Use($x^{<1>}$)  Netlify($x^{<2>}$) and($x^{<3>}$) Hugo($x^{<4>}$) .($x^{<5>}$) 
+
+- y: 0 ($y^{<1>}$)  1($y^{<2>}$) 0($y^{<3>}$) 1($y^{<4>}$) 0($y^{<5>}$)
+
+- $x^{(i)<t>}$, $T_x^{(i)}$ ($i^{th}$ sample)
+
+- $y^{(i)<t>}$, $T_y^{(i)}$ ($i^{th}$ sample)
+
+# Forward Propagation
+
+![](images/rnn1_2.PNG){width=60%}
+
+$a^{<0>}= \mathbf{o}$; $a^{<1>} = g(W_{aa}a^{<0>} + W_{ax}x^{<1>} + b_a)$  
+
+$\hat{y}^{<1>} = g'(W_{ya}a^{<1>} + b_y)$  
+
+$a^{<t>} = g(W_{aa}a^{<t-1>} + W_{ax}x^{<t>} + b_a)$  
+
+$\hat{y}^{<t>} = g'(W_{ya}a^{<t>} + b_y)$  
+
+
+# Forward Propagation
+
+![](images/rnn1_all.PNG){width=50%}
+
+$L^{<t>}(\hat{y}^{<t>}) = -y^{<t>}log(\hat{y}^{<t>}) - (1-y^{<t>})log(1-\hat{y}^{<t>})$  
+
+$L(\hat{y}, y) = \Sigma_{t=1}^{T_y}L^{<t>} (\hat{y}^{<t>}, y^{<t>})$
+
+# Backpropagation through time
+
+![](images/rnn_bp.PNG){width=70%}
+
+# Deep RNN
+
+![](images/d_rnn.PNG){width=70%}
+
+# Vanishing gradients with RNNs
+
+- The cat, which ate already, was full.
+- The cats, which ate already, were full.
+
+![](images/gradients.PNG){width=70%}
+
+# Gated Recurrent Unit (GRU)
+
+- Another way to draw rnn unit
+
+$a^{<t>}=g(W_a[a^{<t-1>}, x^{<t>}] +b_a)$
+
+![](images/rnn_unit.PNG){width=70%}
+
+# Gated Recurrent Unit (GRU)
+
+- Another way to draw rnn unit
+
+$a^{<t>}=g(W_a[a^{<t-1>}, x^{<t>}] +b_a) \longleftarrow tanh$
+
+![](images/rnn_unit.PNG){width=70%}
+
+# GRU
+
+- The **cat**, ......, **was** full.
+
+> - c=memory cell
+> - $\longrightarrow c^{<t>}=a^{<t>}$
+> - $\longrightarrow \tilde{c}^{<t>}=tanh(W_{c}[c^{<t-1>},x^{<t>}]+b_{c})$
+> - $\longrightarrow \Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
+> - $\longrightarrow c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
+
+# GRU
+
+- The **cat**, ......, **was** full.
+
+The $\longleftarrow c^{<t>}=0$, $\Gamma_u = 0$
+
+cat $\longleftarrow c^{<t>}=1$, $\Gamma_u = 1$
+
+which $\longleftarrow c^{<t>}=1$, $\Gamma_u = 0$
+
+...
+
+was $\longleftarrow c^{<t>}=1$, $\Gamma_u = 0$
+
+# GRU
+
+- c = memory cell
+- $\longrightarrow c^{<t>}=a^{<t>}$
+- $\longrightarrow \tilde{c}^{<t>}=tanh(W_{c}[c^{<t-1>},x^{<t>}]+b_{c})$
+- $\longrightarrow \Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
+- $\longrightarrow c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
+
+![](images/gru_unit.PNG){width=60%}
+
+# Full GRU
+
+$c^{<t>}=a^{<t>}$
+
+$\tilde{c}^{<t>}=tanh(W_{c}[c^{<t-1>},x^{<t>}]+b_{c})$
+
+$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
+
+</br>
+
+$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
+
+
+# Full GRU
+
+$c^{<t>}=a^{<t>}$
+
+$\tilde{c}^{<t>}=tanh(W_{c}[\ \ \ \ \ \ \ c^{<t-1>},x^{<t>}]+b_{c})$
+
+$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
+
+</br>
+
+$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
+
+
+# Full GRU
+
+$c^{<t>}=a^{<t>}$
+
+$\tilde{c}^{<t>}=tanh(W_{c}[\Gamma_r* c^{<t-1>},x^{<t>}]+b_{c})$
+
+$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
+
+</br>
+
+$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
+
+# Full GRU
+
+$c^{<t>}=a^{<t>}$
+
+$\tilde{c}^{<t>}=tanh(W_{c}[\Gamma_r* c^{<t-1>},x^{<t>}]+b_{c})$
+
+$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
+
+$\Gamma_{r}=\sigma(W_{r}[c^{<t-1>},x^{<t>}]+b_{r})$
+
+$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
+
+# Long Short Term Memory (LSTM)
+
+\begin{array}{cc}
+GRU & LSTM\\
+\tilde{c}^{<t>}=tanh(W_{c}[\Gamma_{r}*c^{<t-1>},x^{<t>}]+b_{c})\ \ \ \  & \tilde{c}^{<t>}=tanh(W_{c}[a^{<t-1>},x^{<t>}]+b_{c})\\
+\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})\ \ \ \  & \Gamma_{u}=\sigma(W_{u}[a^{<t-1>},x^{<t>}]+b_{u})\\
+\Gamma_{r}=\sigma(W_{r}[c^{<t-1>},x^{<t>}]+b_{r})\ \ \ \  & \Gamma_{f}=\sigma(W_{f}[a^{<t-1>},x^{<t>}]+b_{f})\\
+ & \Gamma_{0}=\sigma(W_{0}[a^{<t-1>},x^{<t>}]+b_{0})\\
+c^{<t>}=\Gamma_{u}*\tilde{c}^{<t>}+(1-\Gamma_{u})*c^{<t-1>\ \ \ \ } & c^{<t>}=\Gamma_{u}*\tilde{c}^{<t>}+\Gamma_{f}*c^{<t-1>}\\
+a^{<t>}=c^{<t>}\ \ \ \  & a^{<t>}=\Gamma_{0}*c^{<t>}
+\end{array}
+
+# LSTM
+
+![](images/LSTM.PNG){width=100%}
+
+# Word representation
+
+- Vacabulary = [a, aaron, ..., zulu, <UNK>], |V|=10,000
+- One hot representation
+
+\begin{array}{cccccc}
+Man & Woman & King & Queen & Apple & Pumpkin\\
+(5391) & (9853) & (4914) & (7157) & (456) & (6332)\\
+\left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+0\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+0\\
+0\\
+0\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right]
+\end{array}
+
+# Word representation
+
+- My favourite Christmas dessert is pumpkin ____ 
+- My favourite Christmas dessert is apple ____ 
+
+\begin{array}{cccccc}
+Man & Woman & King & Queen & Apple & Pumpkin\\
+(5391) & (9853) & (4914) & (7157) & (456) & (6332)\\
+\left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+0\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+\vdots\\
+1\\
+\vdots\\
+0\\
+0\\
+0\\
+0\\
+0
+\end{array}\right] & \left[\begin{array}{c}
+0\\
+0\\
+0\\
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{array}\right]
+\end{array}
+
+# Featurized representation: word embedding
+
+![](images/embedding1.PNG){width=80%}
+
+
+# Featurized representation: word embedding
+
+![](images/embedding2.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding3.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding4.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding5.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding6.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding7.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding8.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding9.PNG){width=80%}
+
+# Featurized representation: word embedding
+
+![](images/embedding10.PNG){width=80%}
+
+# Analogies[^1]
+
+[^1]: Mikolov et. al., 2013, Linguistic regularities in continuous space word representations
+
+- man $\longrightarrow$ woman $\approx$ king $\longrightarrow$  ?
+
+![](images/embedding6.PNG){width=80%}
+
+# Analogies
+
+- man $\longrightarrow$ woman $\approx$ king $\longrightarrow$  ?
+
+![](images/embedding8.PNG){width=80%}
+
+# Analogies
+
+- man $\longrightarrow$ woman $\approx$ king $\longrightarrow$  ?
+
+![](images/embedding11.PNG){width=80%}
+
+
+# Analogies
+
+- $e_{man} - e_{woman} = [-2, -0.01, 0.03, 0]^{T} \approx [-2, 0, 0, 0]^{T}$
+- $e_{king} - e_{queen} = [-1.92, -0.02, 0.01, -0.01]^{T} \approx [-2, 0, 0, 0]^{T}$
+
+![](images/embedding11.PNG){width=80%}
+
+
+# Analogies
+
+$e_{man} - e_{woman} \approx e_{king} - e_{?}$ 
+
+$\rightarrow  \underset{w}{argmax} \{sim (e_{w}, e_{king} - e_{man} + e_{woman})\}$
+
+
+```{r, message=F, fig.width=6, fig.height=4, warning=F}
+require(grid)
+require(ggplot2)
+d=data.frame(gender=c(-1, 1, -0.95, 0.97), loyal=c(0.01, -0.02, 0.93, 0.95))
+ggplot(d, aes(gender, loyal, label= c("man","woman","king","queen"))) + 
+geom_point(size=2, shape=21, fill="black") +
+  geom_text(size=3, hjust = 0, nudge_y = 0.05, nudge_x = - 0.08)+
+  annotate("segment", x = -1, xend = 1, y = 0.01, yend = -0.02, colour = "black", size=1, alpha=0.6, arrow=arrow())+
+  annotate("segment", x = -0.95, xend = 0.97, y = 0.93, yend = 0.95, colour = "black", size=1, alpha=0.6, arrow=arrow())
+```
+
+# Cosine similarity
+
+$sim(e_w, e_{king}-e_{man}+e_{woman})$ = ?
+
+Cosine similarity: $sim(a,b) = \frac{a^{T}b}{ ||a||_{2} ||b||_{2}}$
+
+![](images/cosim.PNG){width=30%}
+
+# Cosine similarity
+
+$sim(e_w, e_{king}-e_{man}+e_{woman})$ = ?
+
+Cosine similarity: $sim(a,b) = \frac{a^{T}b}{ ||a||_{2} ||b||_{2}}$
+
+![](images/cosim.PNG){width=30%}
+
+```{r, message=F, fig.width=6, fig.height=4, warning=FALSE}
+theta=seq(0,pi,length = 100)
+cos_theta=cos(theta)
+plot(theta/pi*180, cos_theta, type = "l", xlab = "degree", ylab = "cos")
+```
+
+# Embedding matrix
+
+![](images/embedding12.PNG){width=100%}
+
+# Embedding matrix
+
+![](images/embedding12.PNG){width=80%}
+
+- In practice, we look up embedding instead of doing matrix multiplication.
+
+# 2019 AI/ML[^AI2019]
+
+[^AI2019]: [AI predictions for 2019 from Yann LeCun, Hilary Mason, Andrew Ng, and Rumman Chowdhury](https://venturebeat.com/2019/01/02/ai-predictions-for-2019-from-yann-lecun-hilary-mason-andrew-ng-and-rumman-chowdhury/)
+
+Andrew Ng: 
+
+- Next massive wave of value creation: manufacturing/agriculture devices company/health care company
+- AI that can arrive at accurate conclusions with less data, something called “few shot learning” by some in the field
+- "generalizability" in computer vision: human radiologists are much better at generalizing
+
+# Some Papers
+
+- Cho et al., 2014. [On the Properties of Neural Machine Translation: Encoder–Decoder Approaches](https://www.aclweb.org/anthology/W14-4012)
+- Chung et al., 2014. [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/abs/1412.3555)
+- Hochreiter & Schmidhuber 1997. [Long short-term memory](https://www.bioinf.jku.at/publications/older/2604.pdf)
