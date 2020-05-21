@@ -4,7 +4,6 @@ author: '[Hui Lin](https://scientistcafe.com) @Netlify</br> </br> Ming Li @Amazo
 date: "`r Sys.Date()`"
 output:
   slidy_presentation:
-    footer: https://course2019.scientistcafe.com/
   ioslides_presentation: default
   beamer_presentation: default
 ---
@@ -13,23 +12,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Learning outcomes:
-
-After taking the CE course, participants will:
-
-1. Get familiar with deep learning methods such as feedforward neural network, CNN, and RNN with hands-on how to apply these deep learning methods through R keras package with TensorFlow backend
-
-2. Understand data science in general and the end-to-end data science project cycles.
-
-3. Get familiar with cloud-based big data platforms (i.e., Databrick’s Spark) for data preprocessing and model development that are widely used in the development and production setting for industry and know how to transit from academia environment to enterprise environment quickly.
-
-4. Learn soft skills to ensure the successful delivery of data science projects and get familiar with typical data science project pitfalls.
-
 # Course Website
 
 <center>
 <font size = "10">
- https://course2019.scientistcafe.com/
+https://course2020.scientistcafe.com/
 </font>
 </center>
 
@@ -60,11 +47,6 @@ After taking the CE course, participants will:
 
 (3) Production: integrate model and analysis into the production system
 
-# Data Pipeline
-
-<center>
-![](../09DataPipeline/images/nf_pipeline.png){width=70%}
-</center>
 
 # Analysis
 
@@ -82,17 +64,23 @@ After taking the CE course, participants will:
 
 (3) Customized model development
 
-# Some confusions and more to come
-
-- Data infrastructure engineer v.s. Data engineer
-- Data engineer v.s. BI engineer
-- BI engineer v.s. Data analyst
-- Data analyst v.s. Data scientist
-- ...
-
 # General Process of Modeling/Analytics
 
 ![](http://scientistcafe.com/book/Figure/GeneralProcessEN.png){width=100%}
+
+# Some confusions and more to come
+
+- **Data infrastructure engineer**: _Go,Python, AWS/Google Cloud/Azure, logstash, Kafka, and Hadoop_
+- **Data engineer**: _spark/scala, python, SQL, AWS/Google Cloud/Azure, Data modeling_
+- **BI engineer**: _Tableau/looker/Mode etc, data visulization, SQL, Python_ 
+- **Data analyst**: _SQL, basic statistics, data visualization_
+- **Data scientist**: _R/Python, SQL, basic + applied statistics, data visualization, experimental design_
+- **Research scientist**: _R/Python, advanced statistics + experimental design, ML, research background, publications, conference contributions, algorithms _
+- **Applied scientist**: _Similar to research scientist, ML algorithm design, often with an expectation of basic software engineering skills_
+- **Machine Learning Engineer**: _More advanced software engineering skillset, algorithms, machine learning algorithm design, system design_
+- ...
+
+
 
 # Three tracks of data science
 
@@ -106,35 +94,6 @@ After taking the CE course, participants will:
 
 <img src="images/tracks3.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
 
-# [Data Science Curriculum Roadmap](https://github.com/brohrer/academic_advisory/blob/master/curriculum_roadmap.md)
-
-<img src="images/DS_Curriculum.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
-
-# What can (should) data science do?
-
-> - Make human better human by alleviating bounded rationality and minimize politics/emotion (rather than make machine more like human)
-
-> - Strive for the “democratization” of data as legally possible: empower everyone in the organization to acquire, process, and leverage data in a timely and efficient fashion
-
-# Data Science Hierarchy of Needs
-
-<img src="images/ds_need.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
-
-# Data Science Types v.s Needs
-
-<img src="images/ds_types.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
-
-# Data Science Types v.s Needs
-
-<img src="images/ds_types1.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
-
-# Data Science Types v.s Needs
-
-<img src="images/ds_types2.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
-
-# Data Science Types v.s Needs
-
-<img src="images/ds_types3.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
 
 # Types of Questions (Modeling/Analytics)
 
@@ -165,39 +124,36 @@ After taking the CE course, participants will:
     - What is the projected net income for the next season?
     - How much inventory should we have? 
 
-<!--
-# AutoML
+# Data Science Types v.s Needs
 
-- What is AutoML?
+<img src="images/ds_types.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
 
-# AutoML
+# Data Flow
 
-- What is AutoML?
-- The goal of AutoML
+<img src="images/dbms.PNG" alt="HTML5 Icon" style="width:1000px;height:500px;">
 
-# AutoML
+# Data Science Roles
 
-- What is AutoML?
-- The goal of AutoML
-- AutoML in practice
+<center>
+![](images/dsrole.png){width=70%}
+</center>
 
-1. Data prepropcessing & feature engineering
-2. Software usability
-3. Speed & performance of underlying machine learning
-4. Hardware
-5. Productionizing models
+# Three tracks of data science
 
-# AutoML
+<img src="images/tracks.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
 
-- What is AutoML?
-- The goal of AutoML
-- AutoML in practice
-- Do you need AutoML?
--->
+# Three tracks of data science
+
+<img src="images/tracks2.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
+
+# Three tracks of data science
+
+<img src="images/tracks3.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
+
 
 # Where does data science belong in your organization?
 
-<center>**A standalone team** </center>
+<center>**1. A standalone team** </center>
 
 - An autonomous unit parallel to engineering
 - A strategic differentiator for the organization
@@ -211,7 +167,7 @@ After taking the CE course, participants will:
 
 # Where does data science belong in your organization?
 
-<center>**An embedded model**</center>
+<center>**2. An embedded model**</center>
 
 - Bring in talented people and farms them out to the rest of the company. There’s still a head of data science, but he/she is mostly a hiring manager and coach.
 - Give up autonomy to ensure utility
@@ -225,7 +181,7 @@ After taking the CE course, participants will:
 
 # Where does data science belong in your organization?
 
-<center>**Integrated team**</center>
+<center>**3. Integrated team**</center>
 
 - No separate data science team; each team hires and manages its own data scientists.
 - Pros: 
@@ -235,23 +191,40 @@ After taking the CE course, participants will:
     - hurt data scientist's career growth; 
     - sacrifice the flexibility of the embedded model
 
+# Startup v.s. Mature company (Pre IPO/Public)
+
+<img src="https://media.giphy.com/media/3osxYamKD88c6pXdfO/giphy.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
+
+# Startup v.s. Mature company (Pre IPO/Public)
+
+<img src="images/smallbig.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
+
+# Regardless of the company stage...
+
+- Every company claims to be data driven, but they are different...
+
+<center>
+![](images/company1.png){width=70%}
+</center>
+
+# Regardless of the company stage...
+
+Excerpt from [How Airbnb Democratizes Data Science With Data University](https://medium.com/airbnb-engineering/how-airbnb-democratizes-data-science-with-data-university-3eccc71e073a): 
+
+<center>
+![](images/company2.png){width=50%}
+</center>
+
 
 # Some links
 
-- Part of the deep learning slides are based on Andrew Ng's course: [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning): Super awesome!
-
-- [Industry recommendations for academic data science programs](https://github.com/brohrer/academic_advisory)
-
+- [Introduction to Data Science](http://scientistcafe.com/IDS/) (still writing): the content of the workshop is in this book
+- Andrew Ng's course: [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning): Super awesome!
 - [Awesome-Data-Science-Materials](https://github.com/happyrabbit/Awesome-Data-Science-Materials)
-
 - Online books:
     - [The Elements of Statistical Learning](http://web.stanford.edu/~hastie/ElemStatLearn/)
     - [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
-    - [Introduction to Data Science](http://scientistcafe.com/IDS/)(still writing)
-
 - Hard copy books:
-    - [Applied Predictive Modeling](http://appliedpredictivemodeling.com)
-    - [R for Marketing Research and Analytics](http://r-marketing.r-forge.r-project.org)
-
-
+    - [Applied Predictive Modeling](http://appliedpredictivemodeling.com/)
+    - [R for Marketing Research and Analytics](http://r-marketing.r-forge.r-project.org/)
 
