@@ -11,6 +11,39 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# A Little Bit of History – Perceptron 
+
+- Fun video: https://www.youtube.com/watch?v=cNxadbrN_aI 
+- Classification of N points into 2 classes: -1 and +1 (i.e. two different colors in the picture below )
+- Two features: ($x_1$ and $x_2$); linear functions to separate classes; find ($w_0$, $w_1$, $w_w$￼) such that:
+
+$$z^{(i)} = w_0 + w_1x_1^{(i)} + w_2x_2^{(i)}$$
+
+$$pred^{(i)}=\begin{cases}
+\begin{array}{c}
+1\\
+-1
+\end{array} & \begin{array}{c}
+if\ z^{(i)}>0\\
+if\ z^{(i)}\le0
+\end{array}\end{cases}$$
+
+<center>
+![](images/Perceptron.png){width=70%}
+</center>
+
+# Perceptron algorithm
+
+- Start with random weights
+- For each data point
+    1. Predict class label
+    2. Update weights when prediction is not correct using a preset learning rate and the value of features of that data point, for example for
+
+
+
+
+
+
 # Types of Neural Network 
 
 <center>
@@ -56,7 +89,7 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 # Gradient Descent
 
-![](../../../IntroDataScience/images/GradientDescent.png){width=90%}
+![](../../../../IntroDataScience/images/GradientDescent.png){width=90%}
 
 # Neural Network:  0 Layer Neural Network
 
@@ -73,7 +106,7 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 # Deep Neural Network
 
 <center>
-![](../../../IntroDataScience/images/dnn_str.png){width=80%}
+![](../../../../IntroDataScience/images/dnn_str.png){width=80%}
 </center>
 
 # Neural Network: 1 Layer Neural Network
