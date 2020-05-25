@@ -54,20 +54,24 @@ knitr::opts_chunk$set(echo = FALSE)
 # Convolutions Schematic
 
 <center>
-![](images/cnn_exp.png){width=60%}
+![](../../../../IntroDataScience/images/convolution1.png){width=60%}
 </center>
 
 <center>
-<img src="images/Convolution_schematic.gif" alt="HTML5 Icon" style="width:500px;height:350px;">
+<img src="images/Convolution_schematic.gif" alt="HTML5 Icon" style="width:450px;height:320px;">
 </center>
 
 # Edge Detection
 
-![](images/edge.png){width=60%}
+<center>
+![](../../../../IntroDataScience/images/edgedet5.png){width=70%}
+</center>
 
-# Vertical Edge Detection
+- [Vertical Edge Detection](https://scientistcafe.com/ids/convolutional-neural-network.html#convolution-layer)
 
-![](images/verticaledge.png){width=60%}
+<center>
+![](images/verticaledge.png){width=50%}
+</center>
 
 # Parameters
 
@@ -122,7 +126,11 @@ If layer $l$ is a convolution layer:
 
 # Pooling Layers
 
-![](images/pooling.png){width=90%}
+![](../../../../IntroDataScience/images/poolinglayer.png){width=70%}
+
+# [Pooling Layers](https://scientistcafe.com/ids/convolutional-neural-network.html#pooling-layer)
+
+![](../../../../IntroDataScience/images/eggshellconv.png){width=60%}
 
 
 # Examples: LeNet - 5

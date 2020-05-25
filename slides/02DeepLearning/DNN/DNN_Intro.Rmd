@@ -11,6 +11,12 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# Types of Neural Network 
+
+<center>
+![](../CNN/images/NN_EXP.png){width=80%}
+</center>
+
 # A Little Bit of History – Perceptron 
 
 - Fun video: https://www.youtube.com/watch?v=cNxadbrN_aI 
@@ -32,23 +38,45 @@ if\ z^{(i)}\le0
 ![](images/Perceptron.png){width=70%}
 </center>
 
-# Perceptron algorithm
+# Perceptron Algorithm
 
-- Start with random weights
-- For each data point
-    1. Predict class label
-    2. Update weights when prediction is not correct using a preset learning rate and the value of features of that data point, for example for
+Start with random weights. Set a maximum of epochs of M, for each epoch:
+
+- For each data point $i$:
+    - Predict class label
+    
+  $$z^{(i)} = w_0 + w_1x_1^{(i)} + w_2x_2^{(i)}$$
+
+  $$pred^{(i)}=\begin{cases}
+\begin{array}{c}
+1\\
+-1
+\end{array} & \begin{array}{c}
+if\ z^{(i)}>0\\
+if\ z^{(i)}\le0
+\end{array}\end{cases}$$
+    
+    - For every data point, we update the weight based on the prediction correctness, learning rate and feature values. 
+    
+$$w_0 = w_0 + \eta(actual^{(i)} - pred^{(i)})$$
+    
+$$w_1 = w_1 + \eta(actual^{(i)} - pred^{(i)})x_1^{(i)}$$
+$$w_2 = w_2 + \eta(actual^{(i)} - pred^{(i)})x_2^{(i)}$$
+
+- Calculate accuracy for the entire dataset to see whether the criteria has meet after each epoch.
 
 
 
+# Perceptron Algorithm
 
+- Perceptron algorithm is  easy to be implemented in any modern program language. 
+    - [Perceptron R notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2961012104553482/2761297084239405/1806228006848429/latest.html)
 
+- It is a linear classification function and the weight is updated after each data points are feed to the algorithm (concept similar to stochastic gradient descent).
 
-# Types of Neural Network 
+- The algorithm continues to update when we feed the same data set again and again (i.e. epochs)
 
-<center>
-![](../CNN/images/NN_EXP.png){width=80%}
-</center>
+- It is not going to converge for none-linearly spreadable problems.
 
 # Logistic Regression as A Neural Network
 
@@ -309,8 +337,6 @@ $$w=w-\alpha \frac{V_{dw}^{corrected}}{\sqrt{S_{dw}^{corrected}} +\epsilon};\ b=
 "Have you eaten of the tree of which I commanded you not to eat?"  
 "The woman whom you gave to be with me, she gave me fruit of the tree, and I ate."
   
-    
-    
 "What is this that you have done?"  
 "The serpent deceived me, and I ate."
 
