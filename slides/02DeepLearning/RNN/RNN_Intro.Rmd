@@ -173,109 +173,21 @@ $L(\hat{y}, y) = \Sigma_{t=1}^{T_y}L^{<t>} (\hat{y}^{<t>}, y^{<t>})$
 
 ![](images/gradients.PNG){width=70%}
 
-# Gated Recurrent Unit (GRU)
+# LSTM
 
-- Another way to draw rnn unit
-
-$a^{<t>}=g(W_a[a^{<t-1>}, x^{<t>}] +b_a)$
-
-![](images/rnn_unit.PNG){width=70%}
-
-# Gated Recurrent Unit (GRU)
-
-- Another way to draw rnn unit
-
-$a^{<t>}=g(W_a[a^{<t-1>}, x^{<t>}] +b_a) \longleftarrow tanh$
-
-![](images/rnn_unit.PNG){width=70%}
-
-# GRU
-
-
-> - c=memory cell
-> - $\longrightarrow c^{<t>}=a^{<t>}$
-> - $\longrightarrow \tilde{c}^{<t>}=tanh(W_{c}[c^{<t-1>},x^{<t>}]+b_{c})$
-> - $\longrightarrow \Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
-> - $\longrightarrow c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
-
-
-# GRU
-
-- c = memory cell
-- $\longrightarrow c^{<t>}=a^{<t>}$
-- $\longrightarrow \tilde{c}^{<t>}=tanh(W_{c}[c^{<t-1>},x^{<t>}]+b_{c})$
-- $\longrightarrow \Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
-- $\longrightarrow c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
-
-![](images/gru_unit.PNG){width=60%}
-
-# Full GRU
-
-$c^{<t>}=a^{<t>}$
-
-$\tilde{c}^{<t>}=tanh(W_{c}[c^{<t-1>},x^{<t>}]+b_{c})$
-
-$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
-
-</br>
-
-$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
-
-
-# Full GRU
-
-$c^{<t>}=a^{<t>}$
-
-$\tilde{c}^{<t>}=tanh(W_{c}[\ \ \ \ \ \ \ c^{<t-1>},x^{<t>}]+b_{c})$
-
-$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
-
-</br>
-
-$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
-
-
-# Full GRU
-
-$c^{<t>}=a^{<t>}$
-
-$\tilde{c}^{<t>}=tanh(W_{c}[\Gamma_r* c^{<t-1>},x^{<t>}]+b_{c})$
-
-$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
-
-</br>
-
-$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
-
-# Full GRU
-
-$c^{<t>}=a^{<t>}$
-
-$\tilde{c}^{<t>}=tanh(W_{c}[\Gamma_r* c^{<t-1>},x^{<t>}]+b_{c})$
-
-$\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
-
-$\Gamma_{r}=\sigma(W_{r}[c^{<t-1>},x^{<t>}]+b_{r})$
-
-$c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
-
-# Long Short Term Memory (LSTM)
-
-$$
-\begin{array}{cc}
-GRU & LSTM\\
-\tilde{c}^{<t>}=tanh(W_{c}[\Gamma_{r}*c^{<t-1>},x^{<t>}]+b_{c})\ \ \ \  & \tilde{c}^{<t>}=tanh(W_{c}[a^{<t-1>},x^{<t>}]+b_{c})\\
-\Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})\ \ \ \  & \Gamma_{u}=\sigma(W_{u}[a^{<t-1>},x^{<t>}]+b_{u})\\
-\Gamma_{r}=\sigma(W_{r}[c^{<t-1>},x^{<t>}]+b_{r})\ \ \ \  & \Gamma_{f}=\sigma(W_{f}[a^{<t-1>},x^{<t>}]+b_{f})\\
- & \Gamma_{0}=\sigma(W_{0}[a^{<t-1>},x^{<t>}]+b_{0})\\
-c^{<t>}=\Gamma_{u}*\tilde{c}^{<t>}+(1-\Gamma_{u})*c^{<t-1>\ \ \ \ } & c^{<t>}=\Gamma_{u}*\tilde{c}^{<t>}+\Gamma_{f}*c^{<t-1>}\\
-a^{<t>}=c^{<t>}\ \ \ \  & a^{<t>}=\Gamma_{0}*c^{<t>}
-\end{array}
-$$
+![](../../../../IntroDataScience/images/lstm1.PNG){width=100%}
 
 # LSTM
 
-![](images/LSTM.PNG){width=100%}
+![](../../../../IntroDataScience/images/lstm2.PNG){width=100%}
+
+# LSTM
+
+![](../../../../IntroDataScience/images/lstm3.PNG){width=100%}
+
+# LSTM
+
+![](../../../../IntroDataScience/images/lstm4.PNG){width=100%}
 
 # Word representation
 

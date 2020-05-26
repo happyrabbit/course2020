@@ -20,7 +20,7 @@ permalink: /course-syllabus/
 | Project Cycle and Common Pitfall | 40 mins | [Slides](https://docs.google.com/presentation/d/1ah9P2FyIkeVWkz76ASq84R4tPkzikeMV9rL_uSZ4qmQ/edit?usp=sharing) |
 | Break | 10 mins |  |
 | Recurrent Neural Network (RNN) | 40 mins | [RNN Introduction](https://course2020.scientistcafe.com/slides/02DeepLearning/RNN/RNN_Intro.html), [Embedding](https://course2020.scientistcafe.com/slides/02DeepLearning/RNN/RNN_Embedding.html) |
-| RNN Hands-on | 20 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/3137931017799475/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/RNN.ipynb) |
+| RNN Hands-on | 20 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/3137931017799475/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/RNN.ipynb), [Tokenize and Pad](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/TokenizingPadding.ipynb) |
 | Break | 10 mins |  |
 | Decision Tree | 45 mins |[Slides](https://docs.google.com/presentation/d/1Qx5lycRASX8yFRhTNgC-_a_9wPugra8Iji5vhd-r7mU/edit#slide=id.p7) |
 | Hands-on| 15 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/2153523447602836/78755435857845/latest.html), Python  |
