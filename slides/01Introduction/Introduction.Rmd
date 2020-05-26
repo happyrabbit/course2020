@@ -80,8 +80,6 @@ https://course2020.scientistcafe.com/
 - **Machine Learning Engineer**: _More advanced software engineering skillset, algorithms, machine learning algorithm design, system design_
 - ...
 
-
-
 # Three tracks of data science
 
 <img src="images/tracks.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
@@ -93,7 +91,6 @@ https://course2020.scientistcafe.com/
 # Three tracks of data science
 
 <img src="images/tracks3.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
-
 
 # Types of Questions (Modeling/Analytics)
 
@@ -137,19 +134,6 @@ https://course2020.scientistcafe.com/
 <center>
 ![](images/dsrole.png){width=70%}
 </center>
-
-# Three tracks of data science
-
-<img src="images/tracks.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
-
-# Three tracks of data science
-
-<img src="images/tracks2.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
-
-# Three tracks of data science
-
-<img src="images/tracks3.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
-
 
 # Where does data science belong in your organization?
 
@@ -219,7 +203,6 @@ Excerpt from [How Airbnb Democratizes Data Science With Data University](https:/
 # Some links
 
 - [Introduction to Data Science](http://scientistcafe.com/IDS/) (still writing): the content of the workshop is in this book
-- Andrew Ng's course: [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning): Super awesome!
 - [Awesome-Data-Science-Materials](https://github.com/happyrabbit/Awesome-Data-Science-Materials)
 - Online books:
     - [The Elements of Statistical Learning](http://web.stanford.edu/~hastie/ElemStatLearn/)
