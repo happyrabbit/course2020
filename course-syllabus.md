@@ -8,8 +8,8 @@ permalink: /course-syllabus/
 | :--- | :---: | :---: |
 | Cloud Platform and Big Data | 45 mins | [Slides](https://docs.google.com/presentation/d/1jWO1-Nloms0x1btYLevUqTBcycZo1SV_cvE9rmg24tM/edit?usp=sharing)   |
 | Hands-on | 30 mins | [Databricks Community Edition](https://databricks.com/try-databricks), [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296595/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/PysparkETL.ipynb)  |
-| Feedforward Neural Network (FFNN) | 45 mins | [Slides](https://course2020.scientistcafe.com/slides/02DeepLearning/DNN/DNN_Intro.html)   |
 | Break | 10 mins |  |
+| Feedforward Neural Network (FFNN) | 45 mins | [Slides](https://course2020.scientistcafe.com/slides/02DeepLearning/DNN/DNN_Intro.html)   |
 | FFNN Hands-on | 30 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296628/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/FFNN.ipynb)  |
 | Break | 10 mins |  |
 | Convolutional Neural Network (CNN)  | 30 mins | [Slides](https://course2020.scientistcafe.com/slides/02DeepLearning/CNN/CNN_Intro.html)   |
