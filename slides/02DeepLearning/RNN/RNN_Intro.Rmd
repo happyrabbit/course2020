@@ -33,7 +33,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # RNN types
 
-![](images/rnn_types.PNG){width=90%}
+- rectangle: a vector
+    - green: input vector 
+    - blue: output vector
+    - red: intermediate state vector
+- arrow: matrix multiplications
+
+![](../../../../IntroDataScience/images/rnnstrs.png){width=90%}
 
 
 # Notation
@@ -185,7 +191,6 @@ $a^{<t>}=g(W_a[a^{<t-1>}, x^{<t>}] +b_a) \longleftarrow tanh$
 
 # GRU
 
-- The **cat**, ......, **was** full.
 
 > - c=memory cell
 > - $\longrightarrow c^{<t>}=a^{<t>}$
@@ -193,19 +198,6 @@ $a^{<t>}=g(W_a[a^{<t-1>}, x^{<t>}] +b_a) \longleftarrow tanh$
 > - $\longrightarrow \Gamma_{u}=\sigma(W_{u}[c^{<t-1>},x^{<t>}]+b_{u})$
 > - $\longrightarrow c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
 
-# GRU
-
-- The **cat**, ......, **was** full.
-
-The $\longleftarrow c^{<t>}=0$, $\Gamma_u = 0$
-
-cat $\longleftarrow c^{<t>}=1$, $\Gamma_u = 1$
-
-which $\longleftarrow c^{<t>}=1$, $\Gamma_u = 0$
-
-...
-
-was $\longleftarrow c^{<t>}=1$, $\Gamma_u = 0$
 
 # GRU
 
@@ -269,6 +261,7 @@ $c^{<t>} = \Gamma_u * \tilde{c}^{<t>}+(1-\Gamma_u)*c^{<t-1>}$
 
 # Long Short Term Memory (LSTM)
 
+$$
 \begin{array}{cc}
 GRU & LSTM\\
 \tilde{c}^{<t>}=tanh(W_{c}[\Gamma_{r}*c^{<t-1>},x^{<t>}]+b_{c})\ \ \ \  & \tilde{c}^{<t>}=tanh(W_{c}[a^{<t-1>},x^{<t>}]+b_{c})\\
@@ -278,6 +271,7 @@ GRU & LSTM\\
 c^{<t>}=\Gamma_{u}*\tilde{c}^{<t>}+(1-\Gamma_{u})*c^{<t-1>\ \ \ \ } & c^{<t>}=\Gamma_{u}*\tilde{c}^{<t>}+\Gamma_{f}*c^{<t-1>}\\
 a^{<t>}=c^{<t>}\ \ \ \  & a^{<t>}=\Gamma_{0}*c^{<t>}
 \end{array}
+$$
 
 # LSTM
 
@@ -544,16 +538,6 @@ plot(theta/pi*180, cos_theta, type = "l", xlab = "degree", ylab = "cos")
 ![](images/embedding12.PNG){width=80%}
 
 - In practice, we look up embedding instead of doing matrix multiplication.
-
-# 2019 AI/ML[^AI2019]
-
-[^AI2019]: [AI predictions for 2019 from Yann LeCun, Hilary Mason, Andrew Ng, and Rumman Chowdhury](https://venturebeat.com/2019/01/02/ai-predictions-for-2019-from-yann-lecun-hilary-mason-andrew-ng-and-rumman-chowdhury/)
-
-Andrew Ng: 
-
-- Next massive wave of value creation: manufacturing/agriculture devices company/health care company
-- AI that can arrive at accurate conclusions with less data, something called “few shot learning” by some in the field
-- "generalizability" in computer vision: human radiologists are much better at generalizing
 
 # Some Papers
 
