@@ -87,7 +87,7 @@ $$w_2 = w_2 + \eta(actual^{(i)} - pred^{(i)})x_2^{(i)}$$
 
 - The algorithm continues to update when we feed the same data set again and again (i.e. epochs)
 
-- It is not going to converge for none-linearly spreadable problems.
+- It is not going to converge for not-linearly spreadable problems.
 
 # Logistic Regression as A Neural Network
 
