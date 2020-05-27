@@ -51,7 +51,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ![](images/encode_image2.png){width=80%}
 </center>
 
-# Convolutions Schematic
+# Convolutions
 
 <center>
 ![](../../../../IntroDataScience/images/convolution1.png){width=60%}
