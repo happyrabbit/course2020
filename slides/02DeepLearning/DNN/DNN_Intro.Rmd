@@ -32,7 +32,7 @@ https://course2020.scientistcafe.com/
 - Classification of N points into 2 classes: -1 and +1 (i.e. two different colors in the picture below)
 - Fun video: https://www.youtube.com/watch?v=cNxadbrN_aI 
 
-- Two features: ($x_1$ and $x_2$); linear functions to separate classes; find ($w_0$, $w_1$, $w_w$￼) such that:
+- Two features: ($x_1$ and $x_2$); linear functions to separate classes; find ($w_0$, $w_1$, $w_2$￼) such that:
 
 $$z^{(i)} = w_0 + w_1x_1^{(i)} + w_2x_2^{(i)}$$
 
