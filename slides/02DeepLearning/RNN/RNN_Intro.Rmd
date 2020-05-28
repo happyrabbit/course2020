@@ -175,19 +175,27 @@ $L(\hat{y}, y) = \Sigma_{t=1}^{T_y}L^{<t>} (\hat{y}^{<t>}, y^{<t>})$
 
 # LSTM
 
-![](../../../../IntroDataScience/images/lstm1.PNG){width=100%}
+<center>
+![](../../../../IntroDataScience/images/lstm1.PNG){width=60%}
+</center>
 
 # LSTM
 
-![](../../../../IntroDataScience/images/lstm2.PNG){width=100%}
+<center>
+![](../../../../IntroDataScience/images/lstm2.PNG){width=60%}
+</center>
 
 # LSTM
 
-![](../../../../IntroDataScience/images/lstm3.PNG){width=100%}
+<center>
+![](../../../../IntroDataScience/images/lstm3.PNG){width=60%}
+</center>
 
 # LSTM
 
-![](../../../../IntroDataScience/images/lstm4.PNG){width=100%}
+<center>
+![](../../../../IntroDataScience/images/lstm4.PNG){width=60%}
+</center>
 
 # Word representation
 
@@ -450,6 +458,15 @@ plot(theta/pi*180, cos_theta, type = "l", xlab = "degree", ylab = "cos")
 ![](images/embedding12.PNG){width=80%}
 
 - In practice, we look up embedding instead of doing matrix multiplication.
+
+# Data Preprocessing
+
+- [Tokenize and Pad](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/TokenizingPadding.ipynb)
+- [Why you should avoid removing STOPWORDS](https://towardsdatascience.com/why-you-should-avoid-removing-stopwords-aa7a353d2a52)
+
+<center>
+![](images/stopwords.PNG){width=80%}
+</center>
 
 # Some Papers
 

@@ -135,46 +135,6 @@ https://course2020.scientistcafe.com/
 ![](images/dsrole.png){width=70%}
 </center>
 
-# Where does data science belong in your organization?
-
-<center>**1. A standalone team** </center>
-
-- An autonomous unit parallel to engineering
-- A strategic differentiator for the organization
-- The head of data science unit should ideally report into the CEO or at least report into someone who understands data strategy and is willing to invest to give it what it needs. 
-- Pros: 
-    - autonomy
-    - well positioned to tackle whatever problems it deems most valuable 
-    - knowledge share and grow
-    - attract/retain talent
-- Cons: risk of marginalization
-
-# Where does data science belong in your organization?
-
-<center>**2. An embedded model**</center>
-
-- Bring in talented people and farms them out to the rest of the company. There’s still a head of data science, but he/she is mostly a hiring manager and coach.
-- Give up autonomy to ensure utility
-- Pros: 
-    - closer to applications
-    - flexibility
-- Cons: 
-    - hard to attract/retain talent 
-    - their embedded team leads don’t feel responsible for their growth and happiness, while their managers won’t feel directly vested in their work
-    - data scientists are second-class citizens everywhere
-
-# Where does data science belong in your organization?
-
-<center>**3. Integrated team**</center>
-
-- No separate data science team; each team hires and manages its own data scientists.
-- Pros: 
-    - optimizes for organizational alignment; 
-- Cons: 
-    - dilutes the identity of data science; 
-    - hurt data scientist's career growth; 
-    - sacrifice the flexibility of the embedded model
-
 # Startup v.s. Mature company (Pre IPO/Public)
 
 <img src="https://media.giphy.com/media/3osxYamKD88c6pXdfO/giphy.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
@@ -198,16 +158,3 @@ Excerpt from [How Airbnb Democratizes Data Science With Data University](https:/
 <center>
 ![](images/company2.png){width=50%}
 </center>
-
-
-# Some links
-
-- [Introduction to Data Science](http://scientistcafe.com/IDS/) (still writing): the content of the workshop is in this book
-- [Awesome-Data-Science-Materials](https://github.com/happyrabbit/Awesome-Data-Science-Materials)
-- Online books:
-    - [The Elements of Statistical Learning](http://web.stanford.edu/~hastie/ElemStatLearn/)
-    - [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
-- Hard copy books:
-    - [Applied Predictive Modeling](http://appliedpredictivemodeling.com/)
-    - [R for Marketing Research and Analytics](http://r-marketing.r-forge.r-project.org/)
-
