@@ -10,7 +10,7 @@ permalink: /course-syllabus/
 | Cloud Platform and Big Data | 45 mins | [Slides](https://docs.google.com/presentation/d/1jWO1-Nloms0x1btYLevUqTBcycZo1SV_cvE9rmg24tM/edit?usp=sharing)   |
 | Break | 15 mins |  |
 | Hands-on | 55 mins | [Databricks Community Edition](https://databricks.com/try-databricks), [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296595/78755435857845/latest.html), [Load Spark Dataframe](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/LoadDatasetSpark.ipynb), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/PysparkETL.ipynb)  |
-| Decision Tree | 45 mins |[Slides](https://docs.google.com/presentation/d/1Qx5lycRASX8yFRhTNgC-_a_9wPugra8Iji5vhd-r7mU/edit#slide=id.p7) |
+| Decision Tree | 45 mins |[Slides](https://course2020.scientistcafe.com/slides/03Tree/Tree.html) |
 | Hands-on| 15 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/2153523447602836/78755435857845/latest.html), Python  |
 | Q&A | 10 mins |  |
 |  |  |  |
