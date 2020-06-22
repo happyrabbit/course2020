@@ -89,5 +89,3 @@ $$L(\hat{y}, y)=-\Sigma_{i=1}^{10,000} y_i log\hat{y}_i$$
 
 # Problems with softmax classification
 
-
-
