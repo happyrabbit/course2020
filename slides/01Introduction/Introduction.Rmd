@@ -28,6 +28,20 @@ https://course2020.scientistcafe.com/
 
 <img src="images/awesome-me.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
 
+# Every company claims to be data driven, but they are different...
+
+<center>
+![](images/company1.png){width=70%}
+</center>
+
+# Every company claims to be data driven, but they are different...
+
+Excerpt from [How Airbnb Democratizes Data Science With Data University](https://medium.com/airbnb-engineering/how-airbnb-democratizes-data-science-with-data-university-3eccc71e073a): 
+
+<center>
+![](images/company2.png){width=50%}
+</center>
+
 # Three tracks of data science
 
 - Engineering (infrastructure and production): the process of making everything else possible 
@@ -143,18 +157,3 @@ https://course2020.scientistcafe.com/
 
 <img src="images/smallbig.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
 
-# Regardless of the company stage...
-
-- Every company claims to be data driven, but they are different...
-
-<center>
-![](images/company1.png){width=70%}
-</center>
-
-# Regardless of the company stage...
-
-Excerpt from [How Airbnb Democratizes Data Science With Data University](https://medium.com/airbnb-engineering/how-airbnb-democratizes-data-science-with-data-university-3eccc71e073a): 
-
-<center>
-![](images/company2.png){width=50%}
-</center>
