@@ -74,7 +74,7 @@ $$w_0 = w_0 + \eta(actual^{(i)} - pred^{(i)})$$
 $$w_1 = w_1 + \eta(actual^{(i)} - pred^{(i)})x_1^{(i)}$$
 $$w_2 = w_2 + \eta(actual^{(i)} - pred^{(i)})x_2^{(i)}$$
 
-- Calculate accuracy for the entire dataset to see whether the criteria has meet after each epoch.
+- Calculate accuracy for the entire dataset to see whether it meets the criteria after each epoch.
 
 
 
