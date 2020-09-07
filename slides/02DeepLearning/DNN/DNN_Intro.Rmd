@@ -1,10 +1,10 @@
 ---
 title: "Neural Networks and Deep Learning"
-author: '[Hui Lin](https://scientistcafe.com) @Netlify</br> </br> Ming Li @Amazon'
+author: '[Hui Lin](https://scientistcafe.com) @Google</br> </br> Ming Li @Amazon'
 date: "`r Sys.Date()`"
 output: 
   slidy_presentation: 
-    footer: "https://course2019.scientistcafe.com/"
+    footer: "https://course2020.scientistcafe.com/"
 ---
 
 ```{r setup, include=FALSE}
@@ -24,6 +24,8 @@ https://course2020.scientistcafe.com/
 <center>
 ![](../CNN/images/NN_EXP.png){width=80%}
 </center>
+
+<font size = "5"> _Figure adapted from slides by Andrew NG, [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning?utm_source=deeplearningai&utm_medium=institutions&utm_campaign=WebsiteCoursesDLSTopButton)_ </font>
 
 # A Little Bit of History – Perceptron 
 
@@ -51,7 +53,7 @@ if\ z^{(i)}\le0
 
 # Perceptron Algorithm
 
-Start with random weights. Set a maximum of epochs of M, for each epoch:
+Start with random weights. Set a maximum of epochs of M, for each epoch (permutation):
 
 - For each data point $i$:
     - Predict class label
@@ -76,8 +78,6 @@ $$w_2 = w_2 + \eta(actual^{(i)} - pred^{(i)})x_2^{(i)}$$
 
 - Calculate accuracy for the entire dataset to see whether it meets the criteria after each epoch.
 
-
-
 # Perceptron Algorithm
 
 - Perceptron algorithm is  easy to be implemented in any modern programing language. 
@@ -87,7 +87,7 @@ $$w_2 = w_2 + \eta(actual^{(i)} - pred^{(i)})x_2^{(i)}$$
 
 - The algorithm continues to update when we feed the same data set again and again (i.e. epochs)
 
-- It is not going to converge for not-linearly spreadable problems.
+- It is not going to converge for non-linearly spreadable problems.
 
 # Logistic Regression as A Neural Network
 
@@ -126,17 +126,29 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
     - $w := w - \alpha \frac{\partial J}{\partial w}$
     - $b := b - \alpha \frac{\partial J}{\partial b}$
 
-# Gradient Descent
+# Forward Propagation
+
+![](images/dnn0_fb1.png){width=100%}
+
+# Forward Propagation
+
+![](images/dnn0_fb2.png){width=100%}
+
+# Backward Propagation
+
+![](images/dnn0_fb3.png){width=100%}
+
+# Forward and Backward Propagation for Logistic Regression
 
 ![](../../../../IntroDataScience/images/GradientDescent.png){width=90%}
 
-# Neural Network:  0 Layer Neural Network
+# Neural Network:  0 Hidden Layer Neural Network
 
 <center>
 ![](images/dnn0.png){width=60%}
 </center>
 
-# Neural Network: 1 Layer Neural Network
+# Neural Network: 1 Hidden Layer Neural Network
 
 <center>
 ![](images/dnn1.png){width=60%}
@@ -160,7 +172,7 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 ![](images/dnn_math2.png){width=80%}
 </center>
 
-# Neural Network: 1 Layer Neural Network
+# Neural Network: 1 Hidden Layer Neural Network
 
 <center>
 ![](images/dnn_math3.png){width=80%}
@@ -177,6 +189,29 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 <center>
 ![](images/dnn_math5.png){width=80%}
 </center>
+
+# MNIST Dataset
+
+- Contains 70000 handwritten labeled digit images with label (60000 training + 10000 testing)
+- Census Bureau employees and American high school students wrote these digits
+- Each image is 28x28 pixel in greyscale
+- Yann LeCun used convolutional network LeNet to achieve < 1% error rate at 1990s
+
+<center>
+![](images/MNIST.png){width=50%}
+</center>
+
+# Image Data
+
+<center>
+![](../CNN/images/encode_image1.png){width=80%}
+</center>
+
+# 1 Hidden Layer Neural Network Example
+
+
+
+# Forward and Backward Propagation 
 
 # Activation Functions
 
@@ -324,17 +359,6 @@ $$w=w-\alpha V_{dw};\ \ b=b-\alpha V_{db}$$
 - **Deal with overfitting**
     - Dropout 
     - Regularization (L1 or L2)
-
-# MNIST Dataset
-
-- Contains 70000 handwritten labeled digit images with label (60000 training + 10000 testing)
-- Census Bureau employees and American high school students wrote these digits
-- Each image is 28x28 pixel in greyscale
-- Yann LeCun used convolutional network LeNet to achieve < 1% error rate at 1990s
-
-<center>
-![](images/MNIST.png){width=50%}
-</center>
 
 # Use Keras R Package
 
