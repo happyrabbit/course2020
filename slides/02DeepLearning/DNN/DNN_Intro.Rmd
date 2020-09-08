@@ -154,12 +154,6 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 ![](images/dnn1.png){width=60%}
 </center>
 
-# Deep Neural Network
-
-<center>
-![](../../../../IntroDataScience/images/dnn_str.png){width=80%}
-</center>
-
 # Neural Network: 1 Layer Neural Network
 
 <center>
@@ -209,10 +203,16 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 # 1 Hidden Layer Neural Network Example
 
-![](images/1hiddenexp.png){width=80%}
+![](images/1hiddenexp.png){width=100%}
 
 
 # Forward and Backward Propagation 
+
+# Deep Neural Network
+
+<center>
+![](../../../../IntroDataScience/images/dnn_str.png){width=80%}
+</center>
 
 # Activation Functions
 
