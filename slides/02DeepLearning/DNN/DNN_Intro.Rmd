@@ -138,7 +138,7 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 ![](images/dnn0_fb3.png){width=100%}
 
-# Forward and Backward Propagation for Logistic Regression
+# Stochastic Gradient Descent (SGD)
 
 ![](../../../../IntroDataScience/images/GradientDescent.png){width=90%}
 
