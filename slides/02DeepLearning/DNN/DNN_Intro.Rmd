@@ -209,6 +209,7 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 # 1 Hidden Layer Neural Network Example
 
+![](images/1hiddenexp.png){width=80%}
 
 
 # Forward and Backward Propagation 
@@ -216,7 +217,7 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 # Activation Functions
 
 <center>
-![](images/activation.png){width=80%}
+![](images/activation.png){width=90%}
 </center>
 
 # Activation Functions
@@ -289,7 +290,6 @@ where $\parallel w^{[l]} \parallel^2_F = \Sigma_{i=1}^{l}\Sigma_{j=1}^{l-1} (w^{
 # Is it overfitting?
 
 ![](../CNN/images/overfitting.png){width=70%}
-
 
 # Exponentially Weighted Averages
 
