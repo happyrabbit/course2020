@@ -210,6 +210,11 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 ![](images/1hiddenfb.png){width=80%}
 
+# Forward and Backward Propagation 
+
+![](images/1hiddenfb_math.png){width=80%}
+
+
 
 # Deep Neural Network
 
