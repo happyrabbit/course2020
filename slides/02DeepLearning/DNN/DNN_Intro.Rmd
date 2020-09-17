@@ -214,35 +214,11 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 ![](images/1hiddenfb_math.png){width=80%}
 
-
-
 # Deep Neural Network
 
 <center>
 ![](../../../../IntroDataScience/images/dnn_str.png){width=80%}
 </center>
-
-# Activation Functions
-
-<center>
-![](images/activation.png){width=90%}
-</center>
-
-# Activation Functions
-
-- Intermediate layers
-    - Relu (i.e. rectified linear unit) is usually a good choice which has the following good properties:   
-(1) fast computation;   
-(2) non-linear;  
-(3) reduced likelihood of the gradient to vanish;   
-(4) Unconstrained response
-    - Sigmoid, studied in the past, not as good as Relu in deep learning, due to the gradient vanishing problem when there are many layers
-    - hyperbolic tangent function (tanh)
-
-- Last layer which connects to the output
-    - Binary classification: sigmoid with binary cross entropy as loss function
-    - Multiple class, single-label classification: softmax with categorical cross entropy for loss function
-    - Continuous responses: identity function (i.e. y = x)
 
 #  Batch, Mini-batch, Stochastic Gradient Descent
 
@@ -260,6 +236,41 @@ $$\begin{array}{ccc}
 y= & [\underbrace{y^{(1)},y^{(2)},\cdots,y^{(1000)}}/ & \cdots/\cdots y^{(m)}]\\
 (1,m) & mini-batch\ 1
 \end{array}$$
+
+
+# Activation Functions
+
+<center>
+![](images/activation.png){width=90%}
+</center>
+
+# Activation Functions
+
+- Representational power: combination of linear and non-linear transformation
+- Some aspects that we can consider:
+    - input and output range
+    - gradients at initialization (usually small values)
+    - gradients at extremes
+    - computational complexity
+- Bad news: no one activation function is the best. 
+- Good news: you can start with common use cases 
+
+# Activation Functions
+
+- Intermediate layers
+    - Relu (i.e. rectified linear unit) is usually a good choice which has the following good properties:   
+(1) fast computation;   
+(2) non-linear;  
+(3) reduced likelihood of the gradient to vanish;   
+(4) Unconstrained response
+    - Sigmoid, studied in the past, not as good as Relu in deep learning, due to the gradient vanishing problem when there are many layers
+    - hyperbolic tangent function (tanh)
+
+- Last layer which connects to the output
+    - Binary classification: sigmoid with binary cross entropy as loss function
+    - Multiple class, single-label classification: softmax with categorical cross entropy for loss function
+    - Continuous responses: identity function (i.e. y = x)
+
 
 # Deal with Overfitting: Regularization
 
