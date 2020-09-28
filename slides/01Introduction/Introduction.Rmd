@@ -137,7 +137,7 @@ plot(graphLayout(dag))
 
 # Modeling
 
-![](images/bread.png){width=100%}
+![](images/bread.png){width=80%}
 
 # General Process of Modeling/Analytics
 

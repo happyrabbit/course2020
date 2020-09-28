@@ -241,11 +241,10 @@ y= & [\underbrace{y^{(1)},y^{(2)},\cdots,y^{(1000)}}/ & \cdots/\cdots y^{(m)}]\\
 (1,m) & mini-batch\ 1
 \end{array}$$
 
-
-# Activation Functions
+#  Batch, Mini-batch, Stochastic Gradient Descent
 
 <center>
-![](images/activation.png){width=90%}
+![](images/batchexp.png){width=80%}
 </center>
 
 # Activation Functions
@@ -258,6 +257,12 @@ y= & [\underbrace{y^{(1)},y^{(2)},\cdots,y^{(1000)}}/ & \cdots/\cdots y^{(m)}]\\
     - computational complexity
 - Bad news: no one activation function is the best. 
 - Good news: you can start with common use cases 
+
+# Activation Functions
+
+<center>
+![](images/activation.png){width=90%}
+</center>
 
 # Activation Functions
 
