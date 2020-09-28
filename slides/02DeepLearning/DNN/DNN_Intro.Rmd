@@ -212,7 +212,11 @@ $\hat{y}^{(i)} = \sigma(w^Tx^{(i)} + b)$ where $\sigma(z) = \frac{1}{1+e^{-z}}$
 
 # Forward and Backward Propagation 
 
+- [MINST with one hidden layer step by step](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/MINST_with_one_hidden_layer.ipynb)
+
 ![](images/1hiddenfb_math.png){width=80%}
+
+
 
 # Deep Neural Network
 
@@ -280,11 +284,11 @@ $$\underset{w,b}{min}J(w,b)= \frac{1}{m} \Sigma_{i=1}^{m}L(\hat{y}^{(i)}, y^{(i)
 
 where 
 
-$$L_2\ penalty=\frac{\lambda}{2m}\parallel w \parallel_2^2 = \frac{\lambda}{2m}\Sigma_{i=1}^{n_x}w_i^2$$
-$$L_1\ penalty = \frac{\lambda}{m}\Sigma_{i=1}^{n_x}|w|$$
+$$L_2\ penalty=\frac{\lambda}{2}\parallel w \parallel_2^2 = \frac{\lambda}{2}\Sigma_{i=1}^{n_x}w_i^2$$
+$$L_1\ penalty = \lambda\Sigma_{i=1}^{n_x}|w|$$
 For neural network,
 
-$$J(w^{[1]},b^{[1]},\dots,w^{[L]},b^{[L]})=\frac{1}{m}\Sigma_{i=1}^{m}L(\hat{y}^{(i)},y^{(i)}) + \frac{\lambda}{2m}\Sigma_{l=1}^{L} \parallel w^{[l]} \parallel^2_F$$
+$$J(w^{[1]},b^{[1]},\dots,w^{[L]},b^{[L]})=\frac{1}{m}\Sigma_{i=1}^{m}L(\hat{y}^{(i)},y^{(i)}) + \frac{\lambda}{2}\Sigma_{l=1}^{L} \parallel w^{[l]} \parallel^2_F$$
 where $\parallel w^{[l]} \parallel^2_F = \Sigma_{i=1}^{l}\Sigma_{j=1}^{l-1} (w^{[l]}_{ij})^2$
 
 # Deal with Overfitting: Dropout

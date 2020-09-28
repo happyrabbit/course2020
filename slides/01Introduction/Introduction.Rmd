@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = F, error = F, warning =  F)
 ```
 
 # Course Website
@@ -18,15 +18,21 @@ knitr::opts_chunk$set(echo = FALSE)
 <font size = "10">
 https://course2020.scientistcafe.com/
 </font>
+
+<img src="https://media.giphy.com/media/Tjjr8OXolrue0evTMx/giphy.gif" alt="HTML5 Icon" style="width:400px; height:500px;">
+
 </center>
+
 
 # The term no one really defined
 
-- What is data science?
+- What is data science? `r emo::ji("confused")`
 
 > Data science is the discipline of making data useful.  Ok...so what is it? 
 
-<img src="images/awesome-me.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
+<center>
+<img src="https://media.giphy.com/media/PkVHsFmmLeBfa/giphy.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
+</center>
 
 # Every company claims to be data driven, but they are different...
 
@@ -72,11 +78,66 @@ Excerpt from [How Airbnb Democratizes Data Science With Data University](https:/
 
 # Modeling
 
-(1) Supervised learning
+**Problem to solve**:
 
-(2) Unsupervised learning
+- Prediction/classification: image recognition, machine translation, spam/not_spam
 
-(3) Customized model development
+- Explanation: customer segmentation, feature prioritization
+
+- Causal inference: vaccine effectiveness, policy change
+
+`r emo::ji("key")` **Questions**
+
+- Do we want to intervene? 
+
+- Is the cost of an error too high?
+
+- Does the problem have a simple objective?
+
+# `r emo::ji("bulb")` Waffle Houses and Divorce Rate
+
+- An example from [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)
+- You can get the data [here](https://raw.githubusercontent.com/pymc-devs/resources/master/Rethinking/Data/WaffleDivorce.csv)
+
+```{r}
+library(dplyr)
+library(rethinking)
+data(WaffleDivorce)
+
+d <- WaffleDivorce 
+d = d %>% select(WaffleHouses, South, MedianAgeMarriage, Marriage, Divorce) 
+head(d)
+```
+
+# `r emo::ji("bulb")` Waffle Houses and Divorce Rate
+
+```{r}
+library(corrplot)
+correlation = cor(d)
+corrplot.mixed(correlation, order = "hclust", tl.pos = "lt", 
+    upper = "ellipse")
+```
+
+
+# `r emo::ji("bulb")` Waffle Houses and Divorce Rate
+
+
+```{r}
+library(dagitty)
+dag <- dagitty( "dag {
+    South -> WaffleHouses
+    South -> MedianAgeMarriage
+    MedianAgeMarriage -> Divorce
+    MedianAgeMarriage -> Marriage
+    Marriage -> Divorce
+}")
+plot(graphLayout(dag))
+```
+
+
+# Modeling
+
+![](images/bread.png){width=100%}
 
 # General Process of Modeling/Analytics
 
@@ -148,12 +209,4 @@ Excerpt from [How Airbnb Democratizes Data Science With Data University](https:/
 <center>
 ![](images/dsrole.png){width=70%}
 </center>
-
-# Startup v.s. Mature company (Pre IPO/Public)
-
-<img src="https://media.giphy.com/media/3osxYamKD88c6pXdfO/giphy.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
-
-# Startup v.s. Mature company (Pre IPO/Public)
-
-<img src="images/smallbig.PNG" alt="HTML5 Icon" style="width:950px;height:550px;">
 
