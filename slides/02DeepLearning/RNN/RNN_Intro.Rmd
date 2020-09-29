@@ -461,12 +461,18 @@ plot(theta/pi*180, cos_theta, type = "l", xlab = "degree", ylab = "cos")
 
 # Data Preprocessing
 
-- [Tokenize and Pad](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/TokenizingPadding.ipynb)
 - [Why you should avoid removing STOPWORDS](https://towardsdatascience.com/why-you-should-avoid-removing-stopwords-aa7a353d2a52)
 
 <center>
 ![](images/stopwords.PNG){width=80%}
 </center>
+
+# Data Preprocessing
+
+- [Tokenize and Pad](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/TokenizingPadding.ipynb)
+
+
+![](https://course2020.scientistcafe.com/slides/02DeepLearning/RNN/images/TokenizingPadding.png){width=80%}
 
 # Some Papers
 

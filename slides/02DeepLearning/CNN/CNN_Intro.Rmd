@@ -35,10 +35,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](images/styletransfer.PNG){width=60%}
 
-# Is it math?
-
-![](images/dontknowmath.PNG){width=60%}
-
 # Image Data
 
 <center>
