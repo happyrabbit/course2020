@@ -105,7 +105,7 @@ library(rethinking)
 data(WaffleDivorce)
 
 d <- WaffleDivorce 
-d = d %>% select(WaffleHouses, South, MedianAgeMarriage, Marriage, Divorce) 
+d = d %>% select(Location, WaffleHouses, South, MedianAgeMarriage, Marriage, Divorce) 
 head(d)
 ```
 
@@ -113,7 +113,7 @@ head(d)
 
 ```{r}
 library(corrplot)
-correlation = cor(d)
+correlation = cor(d %>% select(-Location))
 corrplot.mixed(correlation, order = "hclust", tl.pos = "lt", 
     upper = "ellipse")
 ```
