@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Why Tree Based Models
 
+
 - Can be used for both regression and classification problems
 - Do not require user to specify the form of the relationship between predictors and response 
 - Do not require (or if they do, very limited) data preprocessing and can handle different types of predictors (sparse, skewed, continuous, categorical, etc.)
@@ -55,6 +56,52 @@ $$Entropy=-plog_{2}p-(1-p)log_{2}(1-p)$$
 - **Sum of Square Error (SSE)**: Suppose you want to divide the data set S into two groups of S1 and S2, where the selection of S1 and S2 needs to minimize the sum of squared errors
 
 $$SSE=\Sigma_{i\in S_{1}}(y_{i}-\bar{y}_{1})^{2}+\Sigma_{i\in S_{2}}(y_{i}-\bar{y}_{2})^{2}$$
+
+
+# Splitting Criteria
+
+- **Gini impurity**  (two-class problem): $p_{1}(1-p_{1})+p_{2}(1-p_{2})$
+
+<center>
+![](../../../IntroDataScience/images/giniEN.PNG){width=40%}
+</center>
+
+1. Gini impurity for "Female" = $\frac{1}{6}\times\frac{5}{6}+\frac{5}{6}\times\frac{1}{6}=\frac{5}{18}$
+2. Gini impurity for "Male" = $0\times1+1\times 0=0$
+
+The Gini impurity for the node "Gender" is the following weighted average of the above two scores:
+
+$$\frac{3}{5}\times\frac{5}{18}+\frac{2}{5}\times 0=\frac{1}{6}$$
+
+# Splitting Criteria
+
+- **Entropy**: $Entropy=-plog_{2}p-(1-p)log_{2}(1-p)$
+
+<center>
+![](../../../IntroDataScience/images/giniEN.PNG){width=40%}
+</center>
+
+- Root node: $-\frac{25}{50}log_{2}\frac{25}{50}-\frac{25}{50}log_{2}\frac{25}{50}=1$
+
+The entropy of the split using variable "gender" can be calculated  in three steps:
+
+1. Entropy for "Female" = $-\frac{5}{30}log_{2}\frac{5}{30}-\frac{25}{30}log_{2}\frac{25}{30}=0.65$
+2. Entropy for "Male" = $0\times1+1\times 0=0$
+3. Entropy for the node "Gender" is the weighted average of the above two entropy numbers: $\frac{3}{5}\times 0.65+\frac{2}{5}\times 0=0.39$
+
+# Splitting Criteria
+
+- **Sum of Square Error (SSE)**: $SSE=\Sigma_{i\in S_{1}}(y_{i}-\bar{y}_{1})^{2}+\Sigma_{i\in S_{2}}(y_{i}-\bar{y}_{2})^{2}$
+
+<center>
+![](../../../IntroDataScience/images/varEN.png){width=40%}
+</center>
+
+1. Root SSE: 522.9
+2. SSE for "Female" is 136
+3. SSE for "Male" is 32
+4. SSE for splitting node "Gender" is the sum of the above two numbers which is 168
+
 
 # Tree Pruning
 
