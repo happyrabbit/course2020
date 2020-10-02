@@ -364,6 +364,27 @@ $$w=w-\alpha V_{dw};\ \ b=b-\alpha V_{db}$$
 </center>
 
 
+# RMSprop
+
+On iteration t, compute dw, db using the current mini-batch.
+
+$$S_{dw}=\beta S_{dw} + (1-\beta)dw^2$$
+
+$$S_{db}=\beta S_{db} + (1-\beta)db^2$$
+
+$$w = w - \alpha \frac{dw}{\sqrt{S_{dw}}};\ b=b-\alpha \frac{db}{\sqrt{S_{db}}}$$
+
+# Adaptive Moment Estimation (Adam)
+
+On iteration t, compute $dw$, $db$ using the current mini-batch.
+
+$$\begin{cases} \begin{array}{c} V_{dw}=\beta_{1}V_{dw}+(1-\beta_{1})dw\\ V_{db}=\beta_{1}V_{db}+(1-\beta_{1})db \end{array} & momantum\ update\ \beta_{1}\end{cases}$$
+
+$$\begin{cases} \begin{array}{c} S_{dw}=\beta_{2}S_{dw}+(1-\beta_{2})dw^{2}\\ S_{db}=\beta_{2}S_{db}+(1-\beta_{2})db^{2} \end{array} & RMSprop\ update\ \beta_{2}\end{cases}$$
+
+$$\begin{cases} \begin{array}{c} V_{dw}^{corrected}=\frac{V_{dw}}{1-\beta_{1}^{t}}\\ V_{db}^{corrected}=\frac{V_{db}}{1-\beta_{1}^{t}} \end{array}\end{cases};\ \ \begin{cases} \begin{array}{c} S_{dw}^{corrected}=\frac{S_{dw}}{1-\beta_{2}^{t}}\\ S_{db}^{corrected}=\frac{S_{db}}{1-\beta_{2}^{t}} \end{array}\end{cases}$$
+
+$$w=w-\alpha \frac{V_{dw}^{corrected}}{\sqrt{S_{dw}^{corrected}} +\epsilon};\ b=b-\alpha\frac{V_{db}^{corrected}}{\sqrt{S_{db}^{corrected}}+\epsilon}$$
 
 
 # Recap of A Few Key Concepts
