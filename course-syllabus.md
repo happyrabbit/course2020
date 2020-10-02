@@ -14,7 +14,7 @@ permalink: /course-syllabus/
 | Hands-on| 20 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/2153523447602836/78755435857845/latest.html), Python  |
 |  |  |  |
 | Feedforward Neural Network (FFNN) | 40 mins | [Slides](https://course2020.scientistcafe.com/slides/02DeepLearning/DNN/DNN_Intro.html)   |
-| FFNN Hands-on | 60 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296628/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/FFNN.ipynb)  |
+| FFNN Hands-on | 60 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296628/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/FFNN.ipynb) |
 | Break | 15 mins |  |
 | Convolutional Neural Network (CNN)  | 30 mins | [Slides](https://course2020.scientistcafe.com/slides/02DeepLearning/CNN/CNN_Intro.html)   |
 | CNN Hands-on | 20 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/1821707097719970/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/CNN.ipynb)  |

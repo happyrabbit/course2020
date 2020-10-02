@@ -21,6 +21,7 @@ permalink: /course-materials/
 
 - [Perceptron notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2961012104553482/2761297084239405/1806228006848429/latest.html)
 - [Adaline notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2961012104553482/2761297084239426/1806228006848429/latest.html)
+- [MINST with one hidden layer step by step](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/MINST_with_one_hidden_layer.ipynb)
 - [Optimization Methods Summary](http://ruder.io/optimizing-gradient-descent/)
 - [Data preprocessing notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2961012104553482/3241206203474646/1806228006848429/latest.html)
 - [Data wrangling notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2961012104553482/3241206203474687/1806228006848429/latest.html)

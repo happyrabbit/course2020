@@ -67,7 +67,6 @@ Excerpt from [How Airbnb Democratizes Data Science With Data University](https:/
 
 (3) Production: integrate model and analysis into the production system
 
-
 # Analysis
 
 (1) Domain knowledge

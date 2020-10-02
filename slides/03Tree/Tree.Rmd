@@ -118,6 +118,8 @@ The entropy of the split using variable "gender" can be calculated  in three ste
     - Error-based pruning
     - Error-complexity pruning
     - Minimum error pruning
+    
+Refer to [this section](https://scientistcafe.com/ids/tree-pruning.html) of the book for more detail.
 
 # Bagging Tree
 
