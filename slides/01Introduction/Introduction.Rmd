@@ -12,7 +12,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = F, error = F, warning =  F)
 ```
 
-# Course Website
+# [Course Website](https://course2020.scientistcafe.com/) and [Github](https://github.com/happyrabbit/course2020) 
+
 
 <center>
 <font size = "10">
@@ -34,13 +35,13 @@ https://course2020.scientistcafe.com/
 <img src="https://media.giphy.com/media/PkVHsFmmLeBfa/giphy.gif" alt="HTML5 Icon" style="width:600px;height:400px;">
 </center>
 
-# Every company claims to be data driven, but they are different...
+# All company claim to be data driven, but they are different...
 
 <center>
 ![](images/company1.png){width=70%}
 </center>
 
-# Every company claims to be data driven, but they are different...
+# All company claim to be data driven, but they are different...
 
 Excerpt from [How Airbnb Democratizes Data Science With Data University](https://medium.com/airbnb-engineering/how-airbnb-democratizes-data-science-with-data-university-3eccc71e073a): 
 
@@ -208,5 +209,6 @@ plot(graphLayout(dag))
 <center>
 ![](images/dsrole.png){width=70%}
 </center>
+
 
 
