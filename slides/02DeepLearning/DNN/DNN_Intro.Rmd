@@ -366,6 +366,8 @@ $$w=w-\alpha V_{dw};\ \ b=b-\alpha V_{db}$$
 
 # RMSprop
 
+It was proposed by Geoffrey Hinton at his [Neural Networks Coursera course](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)
+
 On iteration t, compute dw, db using the current mini-batch.
 
 $$S_{dw}=\beta S_{dw} + (1-\beta)dw^2$$
