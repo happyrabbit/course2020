@@ -11,7 +11,7 @@ permalink: /course-syllabus/
 | Break | 15 mins |  |
 | Hands-on | 55 mins | [Databricks Community Edition](https://databricks.com/try-databricks), [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296595/78755435857845/latest.html), [Load Spark Dataframe](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/LoadDatasetSpark.ipynb), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/PysparkETL.ipynb)  |
 | Decision Tree | 20 mins |[Slides](https://course2020.scientistcafe.com/slides/03Tree/Tree.html) |
-| Hands-on| 20 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/2153523447602836/78755435857845/latest.html), Python  |
+| Hands-on| 20 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/2153523447602836/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/TreeBasedModels.ipynb)  |
 |  |  |  |
 | Feedforward Neural Network (FFNN) | 40 mins | [Slides](https://course2020.scientistcafe.com/slides/02DeepLearning/DNN/DNN_Intro.html)   |
 | FFNN Hands-on | 60 mins | [R](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3981279215211072/4269117185296628/78755435857845/latest.html), [Python](https://github.com/happyrabbit/IntroDataScience/blob/master/Python/FFNN.ipynb) |
