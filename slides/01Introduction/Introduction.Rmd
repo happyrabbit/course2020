@@ -209,5 +209,16 @@ plot(graphLayout(dag))
 ![](images/dsrole.png){width=70%}
 </center>
 
+# Some links
+
+- [Introduction to Data Science](http://scientistcafe.com/IDS/) (still writing): the content of the workshop is in this book
+- [Awesome-Data-Science-Materials](https://github.com/happyrabbit/Awesome-Data-Science-Materials)
+- [The Elements of Statistical Learning](http://web.stanford.edu/~hastie/ElemStatLearn/)
+- [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
+- [The `caret` package](https://topepo.github.io/caret/) 
+- Hard copy books:
+    - [Applied Predictive Modeling](http://appliedpredictivemodeling.com/)
+    - [R for Marketing Research and Analytics](http://r-marketing.r-forge.r-project.org/)
+    - [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)
 
 
