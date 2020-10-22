@@ -121,7 +121,6 @@ corrplot.mixed(correlation, order = "hclust", tl.pos = "lt",
 
 # `r emo::ji("bulb")` Waffle Houses and Divorce Rate
 
-
 ```{r}
 library(dagitty)
 dag <- dagitty( "dag {
