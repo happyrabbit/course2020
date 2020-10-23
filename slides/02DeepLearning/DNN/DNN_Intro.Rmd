@@ -31,7 +31,7 @@ https://course2020.scientistcafe.com/
 
 - First concept of a simplified brain cell (1943): McCullock-Pitts (MCP) neuron 
 - Frank Rosenblatt published the first concept of the perceptron learning rule based on MCP (1957)
-- Classification of N points into 2 classes: -1 and +1 (i.e. two different colors in the picture below)
+- Classification of N points into 2 classes: -1 and +1 (i.e., two different colors in the picture below)
 - Fun video: https://www.youtube.com/watch?v=cNxadbrN_aI 
 
 - Two features: ($x_1$ and $x_2$); linear functions to separate classes; find ($w_0$, $w_1$, $w_2$) such that:
@@ -80,12 +80,12 @@ $$w_2 = w_2 + \eta(actual^{(i)} - pred^{(i)})x_2^{(i)}$$
 
 # Perceptron Algorithm
 
-- Perceptron algorithm is  easy to be implemented in any modern programing language. 
+- Perceptron algorithm is  easy to implement in any modern programming language. 
     - [Perceptron R notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2961012104553482/2761297084239405/1806228006848429/latest.html)
 
-- It is a linear classification function and the weight is updated after we feed each data point to the algorithm (concept similar to stochastic gradient descent).
+- It is a linear classification function, and the weight is updated after we feed each data point to the algorithm (a concept similar to stochastic gradient descent).
 
-- The algorithm continues to update when we feed the same data set again and again (i.e. epochs)
+- The algorithm continues to update when we feed the same data set again and again (i.e., epochs)
 
 - It does not solve non-linearly spreadable problems.
 
